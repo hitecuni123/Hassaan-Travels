@@ -4,132 +4,146 @@ const UmrahPage: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
 
-      {/* HERO SECTION */}
-      <section
-        className="relative py-28 md:py-36 px-4 bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "url('/images/umrah.jpg')" }}
-      >
-        {/* LIGHT BLUE OVERLAY */}
-        <div className="absolute inset-0 bg-[#dff4fb]/40"></div>
+      <section className="relative py-20 md:py-24 px-4 overflow-hidden">
 
-        {/* CONTENT */}
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+  {/* BACKGROUND IMAGE (light + soft) */}
+  <div
+    className="absolute inset-0 bg-cover bg-center brightness-125 contrast-90 saturate-75"
+    style={{ backgroundImage: "url('/images/umrah.jpg')" }}
+  ></div>
 
-          {/* HEADING */}
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight text-black">
-            Apply for Your Umrah Visa Online with Hassaan Travel
-          </h1>
+  {/* SOFT BLUE OVERLAY (main effect) */}
+  <div className="absolute inset-0 bg-[#dff4fb]/40"></div>
 
-          {/* DESCRIPTION */}
-          <p className="mt-6 text-gray-700 text-sm md:text-lg max-w-3xl mx-auto">
-            Fast, Easy, and Reliable Umrah Visa Services for Performers from the Netherlands.
-          </p>
+  {/* EXTRA GRADIENT (top sky effect) */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#dff4fb]/60 via-[#dff4fb]/30 to-transparent"></div>
 
-          {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-5xl mx-auto text-center">
 
-            <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold">
-              Apply Umrah Visa Now
-            </button>
+    {/* HEADING */}
+    <h1 className="text-4xl md:text-5xl font-bold leading-tight text-black">
+      Apply for Your Umrah Visa Online with Hassaan Travel
+    </h1>
 
-            <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold">
-              Requirements
-            </button>
+    {/* DESCRIPTION */}
+    <p className="mt-6 text-gray-700 text-sm md:text-lg max-w-3xl mx-auto">
+      Fast, Easy, and Reliable Umrah Visa Services for Performers from the Netherlands.
+    </p>
 
-          </div>
+    {/* BUTTONS */}
+    <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
 
-        </div>
-      </section>
+      <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold">
+        Apply Umrah Visa Now
+      </button>
 
-     
-     {/* ABOUT UMRAH SECTION */}
-<section
-  className="relative py-24 px-4 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('/images/umrah.jpg')" }}
->
-  {/* OVERLAY */}
-  <div className="absolute inset-0 bg-[#dff4fb]/60"></div>
+      <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold">
+        Requirements
+      </button>
 
-  <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-
-    {/* LEFT SIDE IMAGES */}
-<div className="flex justify-center md:justify-start items-center gap-4">
-
-  <img
-    src="/images/umrah-1.jpg"
-    className="w-44 h-64 object-cover rounded-xl shadow-md"
-  />
-
-  <img
-    src="/images/umrah-2.jpg"
-    className="w-44 h-64 object-cover rounded-xl shadow-md"
-  />
-
-  <img
-    src="/images/umrah-3.jpg"
-    className="w-44 h-64 object-cover rounded-xl shadow-md"
-  />
-
-</div>
-
-    {/* RIGHT TEXT */}
-    <div>
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
-        What is an Umrah Visa?
-      </h2>
-
-      <p className="text-black text-sm mb-4 leading-relaxed">
-        An Umrah visa is a permit for those who wish to enter Saudi Arabia
-        to visit the holy site of Makkah to perform Umrah.
-      </p>
-
-      <p className="text-black text-sm mb-4 leading-relaxed">
-        Our company makes it easy for pilgrims to process Umrah visa application.
-      </p>
-
-      <p className="text-black text-sm mb-4 leading-relaxed">
-        With years of experience, we offer customized Umrah packages and excellent customer support and guidance.
-      </p>
-
-      <p className="text-black text-sm leading-relaxed">
-        We believe in maintaining a reliable and time-saving application process, developing a trustworthy reputation.
-      </p>
     </div>
 
   </div>
-
-  {/* BOTTOM SECTION */}
-  <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center mt-20">
-
-    {/* LEFT TEXT */}
-    <div>
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
-        What You Need to Apply?
-      </h2>
-
-      <ul className="text-black text-sm space-y-2 list-disc pl-5">
-        <li>Online Saudi Umrah Visa Application</li>
-        <li>A Valid Passport</li>
-        <li>Passport-size Photo</li>
-        <li>Proof of Relationship</li>
-        <li>No-Objection Letter</li>
-        <li>Ticket</li>
-      </ul>
-    </div>
-
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end">
-      <img
-        src="/images/umrah-4.jpg"
-        className="w-80 h-80 object-cover rounded-[30px] shadow-lg"
-      />
-    </div>
-
-  </div>
-
 </section>
 
+     
+<section className="relative py-20 px-6 overflow-hidden">
 
+  {/* BACKGROUND IMAGE */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/images/umrah.jpg')" }}
+  ></div>
+
+  {/* LIGHT OVERLAY (slightly lighter for visibility) */}
+  <div className="absolute inset-0 bg-[#eaf6fb]/80"></div>
+
+  {/* CONTENT */}
+  <div className="relative max-w-6xl mx-auto">
+
+    {/* HEADING */}
+    <div className="text-center mb-14">
+      <h2 className="text-4xl md:text-4xl font-bold leading-tight text-black">
+        Complete Umrah Visa Services <br /> for Performers
+      </h2>
+    </div>
+
+    {/* TOP 4 CARDS */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+      
+      <div className="bg-white/70 backdrop-blur-md rounded-xl p-6 text-center shadow-md">
+        <img src="/assets/umrah/icon1.webp" className="w-14 h-14 mx-auto mb-4" />
+        <h3 className="font-bold text-base mb-2 text-[#0f172a]">
+          E-Visa Services
+        </h3>
+        <p className="text-sm text-gray-700">
+          Fast and easy processing of your Umrah visa through e-visa.
+        </p>
+      </div>
+
+      <div className="bg-white/70 backdrop-blur-md rounded-xl p-6 text-center shadow-md">
+        <img src="/assets/umrah/icon2.webp" className="w-14 h-14 mx-auto mb-4" />
+        <h3 className="font-bold text-base mb-2 text-[#0f172a]">
+          Document Assistance
+        </h3>
+        <p className="text-sm text-gray-700">
+          Help with collecting the necessary documents.
+        </p>
+      </div>
+
+      <div className="bg-white/70 backdrop-blur-md rounded-xl p-6 text-center shadow-md">
+        <img src="/assets/umrah/icon3.webp" className="w-14 h-14 mx-auto mb-4" />
+        <h3 className="font-bold text-base mb-2 text-[#0f172a]">
+          Group & Family Visa Options
+        </h3>
+        <p className="text-sm text-gray-700">
+          Services for families and groups traveling together.
+        </p>
+      </div>
+
+      <div className="bg-white/70 backdrop-blur-md rounded-xl p-6 text-center shadow-md">
+        <img src="/assets/umrah/icon4.webp" className="w-14 h-14 mx-auto mb-4" />
+        <h3 className="font-bold text-base mb-2 text-[#0f172a]">
+          Visa Tracking
+        </h3>
+        <p className="text-sm text-gray-700">
+          Track your visa status easily from Hassaan Travel.
+        </p>
+      </div>
+    </div>
+
+    {/* BOTTOM BOX */}
+    <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center gap-6">
+      
+      {/* TEXT */}
+      <div className="flex-1">
+        <h3 className="text-2xl md:text-3xl font-extrabold mb-5 text-[#0f172a] leading-snug">
+          The <span className="text-blue-600">Required Documents</span> for
+          <br /> an Umrah visa are
+        </h3>
+
+        <ul className="text-base text-gray-800 space-y-2 list-disc pl-5">
+          <li>Online Saudi Umrah Visa Application</li>
+          <li>A Valid Passport</li>
+          <li>Passport-size Photo</li>
+          <li>Proof of Relationship</li>
+          <li>No-Objection Letter</li>
+          <li>Ticket</li>
+        </ul>
+      </div>
+
+      {/* IMAGE */}
+      <div className="flex-1">
+        <img
+          src="/assets/umrah/kaba.webp"
+          className="rounded-xl w-full h-[240px] object-cover"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 
@@ -188,7 +202,7 @@ const UmrahPage: React.FC = () => {
       <div className="flex items-center w-[380px] bg-[#f3f3f3] rounded-xl p-5">
         
         <img
-          src="/images/step-1.png"
+          src="/assets/umrah/step-1.webp"
           alt="Step 1"
           className="w-20 h-20 mr-5"
         />
@@ -202,7 +216,7 @@ const UmrahPage: React.FC = () => {
       <div className="flex items-center w-[380px] bg-[#f3f3f3] rounded-xl p-5">
         
         <img
-          src="/images/step-2.png"
+          src="/assets/umrah/step-2.webp"
           alt="Step 2"
           className="w-20 h-20 mr-5"
         />
@@ -216,7 +230,7 @@ const UmrahPage: React.FC = () => {
       <div className="flex items-center w-[380px] bg-[#f3f3f3] rounded-xl p-5">
         
         <img
-          src="/images/step-3.png"
+          src="/assets/umrah/step-3.webp"
           alt="Step 3"
           className="w-20 h-20 mr-5"
         />
@@ -248,7 +262,7 @@ const UmrahPage: React.FC = () => {
       {/* CARD 1 */}
       <div className="w-[260px] bg-white rounded-2xl shadow-md p-8 text-left">
 
-        <img src="/images/e-visa.png" className="w-14 h-14 mb-6" />
+        <img src="/assets/umrah/e-visa.webp" className="w-14 h-14 mb-6" />
 
         <h3 className="text-lg font-semibold text-black mb-2">
           E-Visa Services
@@ -263,7 +277,7 @@ const UmrahPage: React.FC = () => {
       {/* CARD 2 */}
       <div className="w-[260px] bg-white rounded-2xl shadow-md p-8 text-left">
 
-        <img src="/images/document.png" className="w-14 h-14 mb-6" />
+        <img src="/assets/umrah/document.webp" className="w-14 h-14 mb-6" />
 
         <h3 className="text-lg font-semibold text-black mb-2">
           Document Assistance
@@ -278,7 +292,7 @@ const UmrahPage: React.FC = () => {
       {/* CARD 3 */}
       <div className="w-[260px] bg-white rounded-2xl shadow-md p-8 text-left">
 
-        <img src="/images/group.png" className="w-14 h-14 mb-6" />
+        <img src="/assets/umrah/group.webp" className="w-14 h-14 mb-6" />
 
         <h3 className="text-lg font-semibold text-black mb-2">
           Group & Family Visa Options
@@ -293,7 +307,7 @@ const UmrahPage: React.FC = () => {
       {/* CARD 4 */}
       <div className="w-[260px] bg-white rounded-2xl shadow-md p-8 text-left">
 
-        <img src="/images/tracking.png" className="w-14 h-14 mb-6" />
+        <img src="/assets/umrah/tracking.webp" className="w-14 h-14 mb-6" />
 
         <h3 className="text-lg font-semibold text-black mb-2">
           Visa Tracking
@@ -315,7 +329,7 @@ const UmrahPage: React.FC = () => {
 {/* WHY HASSAAN TRAVEL SECTION */}
 <section
   className="relative py-20 px-4 sm:px-8 md:px-16 bg-cover bg-center bg-no-repeat overflow-hidden"
-  style={{ backgroundImage: "url('/images/why-bg.jpg')" }}
+  style={{ backgroundImage: "url('/assets/umrah/why-bg.webp')" }}
 >
 
   {/* LIGHT OVERLAY */}
@@ -329,21 +343,21 @@ const UmrahPage: React.FC = () => {
 
       {/* MAIN BIG IMAGE */}
       <img
-        src="/images/why-1.jpg"
+        src="/assets/umrah/why-1.webp"
         alt=""
         className="absolute top-0 left-[-20px] w-[300px] h-[215px] object-cover rounded-[2px] border-[5px] border-white shadow-md z-30"
       />
 
       {/* TOP RIGHT IMAGE */}
       <img
-        src="/images/why-2.jpg"
+        src="/assets/umrah/why-2.webp"
         alt=""
         className="absolute top-[25px] left-[220px] w-[150px] h-[140px] object-cover rounded-[2px] border-[5px] border-white shadow-md z-20"
       />
 
       {/* SMALL CENTER IMAGE */}
       <img
-        src="/images/why-3.jpg"
+        src="/assets/umrah/why-3.webp"
         alt=""
         className="absolute top-[155px] left-[210px] w-[120px] h-[150px] object-cover rounded-[2px] border-[5px] border-white shadow-md z-40"
       />
@@ -353,7 +367,7 @@ const UmrahPage: React.FC = () => {
 <div className="absolute top-[200px] left-[20px] w-[280px] h-[200px] overflow-hidden rounded-[2px] border-[5px] border-white shadow-md z-10">
 
   <img
-    src="/images/why-4.jpg"
+    src="/assets/umrah/why-4.webp"
     alt=""
     className="w-full h-full object-cover"
     style={{
@@ -450,7 +464,7 @@ const UmrahPage: React.FC = () => {
 
         {/* LEFT BIG IMAGE */}
         <img
-          src="/images/travel-1.jpg"
+          src="/assets/umrah/travel-1.webp"
           alt=""
           className="h-[350px] w-full object-cover rounded-2xl shadow-lg"
         />
@@ -458,12 +472,12 @@ const UmrahPage: React.FC = () => {
         {/* RIGHT SIDE STACK */}
         <div className="flex flex-col gap-6">
           <img
-            src="/images/travel-2.jpg"
+            src="/assets/umrah/travel-2.webp"
             alt=""
             className="h-[150px] w-full object-cover rounded-2xl shadow-lg"
           />
           <img
-            src="/images/travel-3.jpg"
+            src="/assets/umrah/travel-3.webp"
             alt=""
             className="h-[180px] w-full object-cover rounded-2xl shadow-lg"
           />
@@ -601,8 +615,8 @@ const UmrahPage: React.FC = () => {
 
 <section className="bg-[#eaf6fb] py-12">
 
-  {/* FULL WIDTH CONTAINER */}
-  <div className="w-full px-2 sm:px-4">
+  {/* CENTERED CONTAINER (NOT FULL WIDTH) */}
+  <div className="max-w-6xl mx-auto px-4">
 
     <div className="relative rounded-2xl overflow-hidden shadow-lg">
 
@@ -617,33 +631,28 @@ const UmrahPage: React.FC = () => {
         <source src="/videos/video2.mp4" type="video/mp4" />
       </video>
 
-      {/* LIGHT OVERLAY */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/20"></div>
 
       {/* CONTENT */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
 
-        {/* BADGE (SLIGHTLY BIGGER) */}
         <div className="bg-white/80 text-blue-700 text-sm md:text-base px-5 py-2.5 rounded-full mb-5 shadow font-semibold">
           ✈️ RECOGNIZED PARTNERS • 17+ YEARS EXCELLENCE
         </div>
 
-        {/* HEADING (BIGGER) */}
         <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
           Seamless Travel, Extraordinary Experiences
         </h1>
 
-        {/* BUTTONS (BIGGER) */}
         <div className="flex gap-4 flex-wrap justify-center">
-
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-7 py-3 rounded-lg shadow-md font-semibold text-base transition">
+          <button className="bg-blue-500 hover  :bg-blue-600 text-white px-7 py-3 rounded-lg shadow-md font-semibold text-base transition">
             Call Now
           </button>
 
           <button className="bg-blue-500 hover:bg-blue-600 text-white px-7 py-3 rounded-lg shadow-md font-semibold text-base transition">
             Book Now
           </button>
-
         </div>
 
       </div>
@@ -653,7 +662,6 @@ const UmrahPage: React.FC = () => {
   </div>
 
 </section>
-
 
     </div>
   );

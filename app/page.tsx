@@ -1,3 +1,20 @@
+import {
+  FaPlane,
+  FaBed,
+  FaFileAlt,
+  FaHeadset,
+  FaCheck,
+  FaStar
+} from "react-icons/fa";
+
+import {
+  MdLocationOn,
+  MdEmail,
+  MdPhone
+} from "react-icons/md";
+
+import { GiTakeMyMoney } from "react-icons/gi";
+
 import Image from "next/image";
 export default function Home() {
   return (
@@ -122,12 +139,12 @@ export default function Home() {
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
   {[
-    { img: "dubai.jpg", name: "Dubai", country: "UAE", price: "€ 1,650" },
-    { img: "istanbul.jpg", name: "Istanbul", country: "Turkey", price: "€ 1,750" },
-    { img: "bangkok.jpg", name: "Bangkok", country: "Thailand", price: "€ 2,250" },
-    { img: "makkah.jpg", name: "Makkah", country: "Saudi Arabia", price: "€ 1,950" },
-    { img: "madinah.jpg", name: "Madinah", country: "Saudi Arabia", price: "€ 1,850" },
-    { img: "kuala-lumpur.jpg", name: "Kuala Lumpur", country: "Malaysia", price: "€ 2,150" },
+    { img: "dubai.webp", name: "Dubai", country: "UAE", price: "€ 1,650" },
+    { img: "istanbul.webp", name: "Istanbul", country: "Turkey", price: "€ 1,750" },
+    { img: "bangkok.webp", name: "Bangkok", country: "Thailand", price: "€ 2,250" },
+    { img: "makkah.webp", name: "Makkah", country: "Saudi Arabia", price: "€ 1,950" },
+    { img: "madinah.webp", name: "Madinah", country: "Saudi Arabia", price: "€ 1,850" },
+    { img: "kuala-lumpur.webp", name: "Kuala Lumpur", country: "Malaysia", price: "€ 2,150" },
   ].map((item, i) => (
     <div
       key={i}
@@ -136,7 +153,7 @@ export default function Home() {
 
       {/* IMAGE LEFT */}
       <Image
-        src={`/images/${item.img}`}
+        src={`/assets/home/${item.img}`}
         alt={item.name}
         width={140}
         height={110}
@@ -166,7 +183,7 @@ export default function Home() {
 {/* EXPERT VISA SOLUTIONS */}
 <section
   className="py-12 sm:py-20 px-4 sm:px-8 md:px-16 bg-cover bg-center bg-no-repeat relative"
-  style={{ backgroundImage: "url('/images/tour.jpg')" }}
+  style={{ backgroundImage: "url('/images/tour.webp')" }}
 >
 
   {/* TITLE */}
@@ -177,52 +194,56 @@ export default function Home() {
   <p className="text-gray-600 mt-2 mb-12 px-2">
     Streamlined processing with guaranteed approval for all destinations
   </p>
+{/* CARDS */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-0 sm:px-4 md:px-8">
 
-  {/* CARDS */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-0 sm:px-4 md:px-8">
+  {[
+    {
+      title: "Flight Booking",
+      desc: "Book affordable flights with flexible options for individuals and families.",
+      icon: <FaPlane />,
+    },
+    {
+      title: "Hotel Reservations",
+      desc: "Comfortable accommodations in Makkah, Madinah and worldwide destinations.",
+      icon: <FaBed />,
+    },
+    {
+      title: "Visa Processing",
+      desc: "Fast and reliable visa services ensuring smooth approval for travelers.",
+      icon: <FaFileAlt />,
+    },
+    {
+      title: "24/7 Support",
+      desc: "Round-the-clock customer support for all your travel needs.",
+      icon: <FaHeadset />,
+    },
+  ].map((item, i) => (
 
-    {[
-      {
-        title: "Flight Booking",
-        desc: "Book affordable flights with flexible options for individuals and families.",
-        icon: "✈️",
-      },
-      {
-        title: "Hotel Reservations",
-        desc: "Comfortable accommodation in Makkah, Madinah and worldwide destinations.",
-        icon: "🛏️",
-      },
-      {
-        title: "Visa Processing",
-        desc: "Fast and reliable visa services ensuring smooth approval for travelers.",
-        icon: "📄",
-      },
-      {
-        title: "24/7 Support",
-        desc: "Round-the-clock customer support for all your travel needs.",
-        icon: "🎧",
-      },
-    ].map((item, i) => (
-      <div
-        key={i}
-        className="bg-white/40 backdrop-blur-lg border border-white/40 rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-lg transition"
-      >
+    <div
+      key={i}
+      className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-left"
+    >
 
-        {/* ICON */}
-        <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-blue-500 text-white text-lg sm:text-xl shadow">
-          {item.icon}
-        </div>
-
-        <h3 className="font-semibold text-base sm:text-lg">{item.title}</h3>
-
-        <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-          {item.desc}
-        </p>
-
+      {/* ICON LEFT */}
+      <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500 text-white text-xl mb-4">
+        {item.icon}
       </div>
-    ))}
 
-  </div>
+      {/* TEXT */}
+      <h3 className="font-semibold text-lg mb-2">
+        {item.title}
+      </h3>
+
+      <p className="text-sm text-gray-500 leading-relaxed">
+        {item.desc}
+      </p>
+
+    </div>
+
+  ))}
+
+</div>
 
 {/* PARTNERS */}
 <div className="mt-16">
@@ -320,10 +341,9 @@ export default function Home() {
                   className="flex items-start gap-4 bg-white p-4 sm:p-5 rounded-xl shadow-md"
                 >
 
-                  {/* ICON */}
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg">
-                    ✓
-                  </div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-blue-500 text-white rounded-lg">
+  <FaCheck />
+</div>
 
                   {/* TEXT */}
                   <div>
@@ -342,7 +362,7 @@ export default function Home() {
 <div className="order-first lg:order-last flex justify-center">
 
   <Image
-    src="/images/hotel.jpg"
+    src="/assets/home/hotel.webp"
     alt="Luxury Hotel"
     width={500}
     height={700}
@@ -362,28 +382,28 @@ export default function Home() {
 
         {/* CONTENT - Responsive grid */}
         <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center px-4 sm:px-8 md:px-16">
-
+                
           {[
-            {
-              icon: "✈️",
-              title: "IATA Certified",
-              desc: "Fully Authorized Agency",
-            },
-            {
-              icon: "🎧",
-              title: "Concierge Support",
-              desc: "Available 24/7",
-            },
-            {
-              icon: "🏅",
-              title: "Award-Winning",
-              desc: "15+ Years Excellence",
-            },
-            {
-              icon: "✨",
-              title: "Premium Service",
-              desc: "White-Glove Treatment",
-            },
+              {
+    icon: <FaPlane />,
+    title: "IATA Certified",
+    desc: "Fully Authorized Agency",
+  },
+  {
+    icon: <FaHeadset />,
+    title: "Concierge Support",
+    desc: "Available 24/7",
+  },
+  {
+    icon: <GiTakeMyMoney />,
+    title: "Award-Winning",
+    desc: "15+ Years Excellence",
+  },
+  {
+    icon: <FaStar />,
+    title: "Premium Service",
+    desc: "White-Glove Treatment",
+  },
           ].map((item, i) => (
             <div key={i} className="flex flex-col items-center">
 
@@ -418,74 +438,86 @@ export default function Home() {
   ></iframe>
 </div>
 
-          {/* RIGHT SIDE */}
-        <div className="space-y-4 sm:space-y-6 h-full flex flex-col justify-between">
-            {/* LOCATION CARD */}
-            <div className="bg-white/70 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow flex gap-4 items-start">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg">
-                📍
-              </div>
+{/* RIGHT SIDE */}
+<div className="space-y-4 sm:space-y-6 h-full flex flex-col justify-between">
 
-              <div>
-                <h3 className="font-semibold">Rotterdam</h3>
-                <p className="text-sm text-gray-500">
-                  Dordtselaan 67D, 3081BG Rotterdam, Netherlands
-                </p>
-                <p className="text-xs text-gray-400 mt-2">
-                  Monday - Saturday <br /> Sunday: Closed
-                </p>
-              </div>
-            </div>
+  {/* LOCATION CARD */}
+  <div className="bg-white/70 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow flex gap-4 items-start">
+    
+    <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg text-lg">
+      <MdLocationOn />
+    </div>
 
-            {/* FORM */}
-            <div className="bg-white/70 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow space-y-4">
+    <div>
+      <h3 className="font-semibold">Rotterdam</h3>
+      <p className="text-sm text-gray-500">
+        Dordtselaan 67D, 3081BG Rotterdam, Netherlands
+      </p>
+      <p className="text-xs text-gray-400 mt-2">
+        Monday - Saturday <br /> Sunday: Closed
+      </p>
+    </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input
-                  placeholder="Your Name"
-                  className="border p-3 rounded-lg text-sm w-full"
-                />
-                <input
-                  placeholder="your@email.com"
-                  className="border p-3 rounded-lg text-sm w-full"
-                />
-              </div>
+  </div>
 
-              <textarea
-                placeholder="Tell us about your travel plans..."
-                className="border p-3 rounded-lg text-sm w-full"
-                rows={3}
-              ></textarea>
+  {/* FORM */}
+  <div className="bg-white/70 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow space-y-4">
 
-              <button className="bg-blue-500 text-white px-6 py-2 rounded-lg text-sm w-full sm:w-auto">
-                Send Now
-              </button>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <input
+        type="text"
+        placeholder="Your Name"
+        className="border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none p-3 rounded-lg text-sm w-full transition"
+      />
 
-            </div>
+      <input
+        type="email"
+        placeholder="your@email.com"
+        className="border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none p-3 rounded-lg text-sm w-full transition"
+      />
+    </div>
 
-            {/* PHONE */}
-            <div className="bg-white/70 backdrop-blur-md p-4 sm:p-5 rounded-xl shadow flex items-center gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg">
-                📞
-              </div>
-              <div>
-                <p className="text-xs text-gray-400">Phone</p>
-                <p className="text-sm font-medium">+31 104857673</p>
-              </div>
-            </div>
+    <textarea
+      placeholder="Tell us about your travel plans..."
+      className="border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none p-3 rounded-lg text-sm w-full transition"
+      rows={3}
+    ></textarea>
 
-            {/* EMAIL */}
-            <div className="bg-white/70 backdrop-blur-md p-4 sm:p-5 rounded-xl shadow flex items-center gap-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg">
-                ✉️
-              </div>
-              <div>
-                <p className="text-xs text-gray-400">Email</p>
-                <p className="text-sm font-medium">info@hassaantravel.nl</p>
-              </div>
-            </div>
+    <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-6 py-2 rounded-lg text-sm w-full sm:w-auto shadow-md hover:shadow-lg">
+      Send Now
+    </button>
 
-          </div>
+  </div>
+
+  {/* PHONE */}
+  <div className="bg-white/70 backdrop-blur-md p-4 sm:p-5 rounded-xl shadow flex items-center gap-4">
+
+    <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg text-lg">
+      <MdPhone />
+    </div>
+
+    <div>
+      <p className="text-xs text-gray-400">Phone</p>
+      <p className="text-sm font-medium">+31 104857673</p>
+    </div>
+
+  </div>
+
+  {/* EMAIL */}
+  <div className="bg-white/70 backdrop-blur-md p-4 sm:p-5 rounded-xl shadow flex items-center gap-4">
+
+    <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg text-lg">
+      <MdEmail />
+    </div>
+
+    <div>
+      <p className="text-xs text-gray-400">Email</p>
+      <p className="text-sm font-medium">info@hassaantravel.nl</p>
+    </div>
+
+  </div>
+
+</div>
 
         </div>
 

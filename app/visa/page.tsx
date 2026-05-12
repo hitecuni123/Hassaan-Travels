@@ -4,14 +4,20 @@ export default function UmrahPage() {
   return (
     <main className="w-full overflow-hidden">
 
-      {/* HERO SECTION */}
-<section
-  className="relative py-28 md:py-36 px-4 bg-cover bg-center bg-no-repeat overflow-hidden"
-  style={{ backgroundImage: "url('/images/umrah.jpg')" }}
->
+{/* HERO SECTION */}
+<section className="relative py-20 md:py-24 px-4 overflow-hidden">
 
-  {/* LIGHT BLUE OVERLAY */}
- <div className="absolute inset-0 bg-[#dff4fb]/40"></div>
+  {/* BACKGROUND IMAGE (light + soft) */}
+  <div
+    className="absolute inset-0 bg-cover bg-center brightness-125 contrast-90 saturate-75"
+    style={{ backgroundImage: "url('/images/umrah.jpg')" }}
+  ></div>
+
+  {/* SOFT BLUE OVERLAY */}
+  <div className="absolute inset-0 bg-[#dff4fb]/40"></div>
+
+  {/* TOP GRADIENT (sky feel) */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#dff4fb]/60 via-[#dff4fb]/30 to-transparent"></div>
 
   {/* CONTENT */}
   <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -22,12 +28,12 @@ export default function UmrahPage() {
     </h1>
 
     {/* DESCRIPTION */}
-    <p className="mt-6 text-gray-700 text-sm md:text-lg max-w-3xl mx-auto">
+    <p className="mt-5 text-gray-700 text-sm md:text-lg max-w-3xl mx-auto">
       Get your Umrah, Pakistani, Saudia, UAE, and Netherlands visas quickly and easily with Hassaan Travel.
     </p>
 
     {/* BUTTONS */}
-    <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+    <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
 
       <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold">
         Apply for Your Visa Online
@@ -42,8 +48,6 @@ export default function UmrahPage() {
   </div>
 
 </section>
-      
-
 
 {/* OUR SERVICES SECTION */}
 <section
@@ -71,7 +75,7 @@ export default function UmrahPage() {
   {/* CARD 1 */}
   <div className="relative rounded-2xl overflow-hidden shadow-lg group">
     <img
-      src="/images/why-1.jpg"
+      src="/assets/visa/why-1.webp"
       alt="Saudia Visa"
       className="w-full h-[380px] md:h-[420px] object-cover group-hover:scale-105 transition duration-500"
     />
@@ -89,7 +93,7 @@ export default function UmrahPage() {
   {/* CARD 2 */}
   <div className="relative rounded-2xl overflow-hidden shadow-lg group">
     <img
-      src="/images/why-2.jpg"
+      src="/assets/visa/why-2.webp"
       alt="Pakistan Visa"
       className="w-full h-[380px] md:h-[420px] object-cover group-hover:scale-105 transition duration-500"
     />
@@ -107,7 +111,7 @@ export default function UmrahPage() {
   {/* CARD 3 */}
   <div className="relative rounded-2xl overflow-hidden shadow-lg group">
     <img
-      src="/images/why-1.jpg"
+      src="/assets/visa/why-1.webp"
       alt="Saudia Visa"
       className="w-full h-[380px] md:h-[420px] object-cover group-hover:scale-105 transition duration-500"
     />
@@ -125,7 +129,7 @@ export default function UmrahPage() {
   {/* CARD 4 */}
   <div className="relative rounded-2xl overflow-hidden shadow-lg group">
     <img
-      src="/images/why-2.jpg"
+      src="/assets/visa/why-2.webp"
       alt="Pakistan Visa"
       className="w-full h-[380px] md:h-[420px] object-cover group-hover:scale-105 transition duration-500"
     />
@@ -162,21 +166,21 @@ export default function UmrahPage() {
 
       {/* MAIN BIG IMAGE */}
       <img
-        src="/images/why-1.jpg"
+        src="/assets/visa/why-1.webp"
         alt=""
         className="absolute top-0 left-[-20px] w-[300px] h-[215px] object-cover rounded-[2px] border-[5px] border-white shadow-md z-30"
       />
 
       {/* TOP RIGHT IMAGE */}
       <img
-        src="/images/why-2.jpg"
+        src="/assets/visa/why-2.webp"
         alt=""
         className="absolute top-[25px] left-[220px] w-[150px] h-[140px] object-cover rounded-[2px] border-[5px] border-white shadow-md z-20"
       />
 
       {/* SMALL CENTER IMAGE */}
       <img
-        src="/images/why-3.jpg"
+        src="/assets/visa/why-3.webp"
         alt=""
         className="absolute top-[155px] left-[210px] w-[120px] h-[150px] object-cover rounded-[2px] border-[5px] border-white shadow-md z-40"
       />
@@ -186,7 +190,7 @@ export default function UmrahPage() {
 <div className="absolute top-[200px] left-[20px] w-[280px] h-[200px] overflow-hidden rounded-[2px] border-[5px] border-white shadow-md z-10">
 
   <img
-    src="/images/why-4.jpg"
+    src="/assets/visa/why-4.webp"
     alt=""
     className="w-full h-full object-cover"
     style={{
@@ -322,21 +326,21 @@ export default function UmrahPage() {
 
   {/* BIG LEFT IMAGE */}
   <img
-    src="/images/travel-1.jpg"
+    src="/assets/visa/travel-1.webp"
     alt=""
     className="row-span-2 h-full w-full object-cover rounded-2xl shadow-lg"
   />
 
   {/* TOP RIGHT */}
   <img
-    src="/images/travel-2.jpg"
+    src="/assets/visa/travel-2.webp"
     alt=""
     className="h-[160px] w-full object-cover rounded-2xl shadow-lg"
   />
 
   {/* BOTTOM RIGHT */}
   <img
-    src="/images/travel-3.jpg"
+    src="/assets/visa/travel-3.webp"
     alt=""
     className="h-full w-full object-cover rounded-2xl shadow-lg"
   />
@@ -559,8 +563,8 @@ export default function UmrahPage() {
 
 <section className="bg-[#eaf6fb] py-12">
 
-  {/* FULL WIDTH CONTAINER */}
-  <div className="w-full px-2 sm:px-4">
+  {/* CENTERED CONTAINER (NOT FULL WIDTH) */}
+  <div className="max-w-6xl mx-auto px-4">
 
     <div className="relative rounded-2xl overflow-hidden shadow-lg">
 
@@ -575,25 +579,21 @@ export default function UmrahPage() {
         <source src="/videos/video2.mp4" type="video/mp4" />
       </video>
 
-      {/* LIGHT OVERLAY */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/20"></div>
 
       {/* CONTENT */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
 
-        {/* BADGE (SLIGHTLY BIGGER) */}
         <div className="bg-white/80 text-blue-700 text-sm md:text-base px-5 py-2.5 rounded-full mb-5 shadow font-semibold">
           ✈️ RECOGNIZED PARTNERS • 17+ YEARS EXCELLENCE
         </div>
 
-        {/* HEADING (BIGGER) */}
         <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
           Seamless Travel, Extraordinary Experiences
         </h1>
 
-        {/* BUTTONS (BIGGER) */}
         <div className="flex gap-4 flex-wrap justify-center">
-
           <button className="bg-blue-500 hover:bg-blue-600 text-white px-7 py-3 rounded-lg shadow-md font-semibold text-base transition">
             Call Now
           </button>
@@ -601,7 +601,6 @@ export default function UmrahPage() {
           <button className="bg-blue-500 hover:bg-blue-600 text-white px-7 py-3 rounded-lg shadow-md font-semibold text-base transition">
             Book Now
           </button>
-
         </div>
 
       </div>

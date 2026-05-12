@@ -153,19 +153,19 @@ export default function ContactPage() {
     <div className="grid grid-cols-2 gap-6 h-[520px]">
 
       <img
-        src="/images/travel-1.jpg"
+        src="/assets/contacts/travel-1.webp"
         alt=""
         className="row-span-2 h-full w-full object-cover rounded-2xl shadow-lg"
       />
 
       <img
-        src="/images/travel-2.jpg"
+        src="/assets/contacts/travel-2.webp"
         alt=""
         className="h-[160px] w-full object-cover rounded-2xl shadow-lg"
       />
 
       <img
-        src="/images/travel-3.jpg"
+        src="/assets/contacts/travel-3.webp"
         alt=""
         className="h-full w-full object-cover rounded-2xl shadow-lg"
       />
