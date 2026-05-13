@@ -42,35 +42,42 @@ export default function FaqSection() {
           <div className="grid grid-cols-2 gap-6">
 
             <img
-              src="/assets/umrah/travel-1.webp"
+              src="/images/f1.webp"
               alt=""
-              className="h-[350px] w-full object-cover rounded-2xl shadow-lg"
+              className="h-[380px] w-full object-cover rounded-2xl shadow-lg"
             />
 
             <div className="flex flex-col gap-6">
               <img
-                src="/assets/umrah/travel-2.webp"
+                src="/images/f2.webp"
                 alt=""
                 className="h-[150px] w-full object-cover rounded-2xl shadow-lg"
               />
               <img
-                src="/assets/umrah/travel-3.webp"
+                src="/images/f3.webp"
                 alt=""
-                className="h-[180px] w-full object-cover rounded-2xl shadow-lg"
+                className="h-[320px] w-full object-cover rounded-2xl shadow-lg"
               />
             </div>
 
           </div>
+<div className="h-[100px] w-[270px] relative -top-[90px] border border-blue-400 rounded-lg px-10 py-6 flex items-start justify-center bg-white shadow-sm">
+  
+  <div className="flex items-center gap-3 mt-2">
 
-          <div className="border-2 border-blue-500 rounded-xl h-[90px] flex items-center justify-center">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
-                🌍
-              </div>
-              <span className="text-gray-700 font-medium">Lets Explore!</span>
-            </div>
-          </div>
+    <img
+      src="/images/f4.webp"
+      alt="icon"
+      className="w-8 h-8 object-contain"
+    />
 
+    <span className="text-gray-700 text-sm font-medium">
+      Lets Explore!
+    </span>
+
+  </div>
+
+</div>
         </div>
 
         {/* RIGHT SIDE FAQ */}
