@@ -7,7 +7,7 @@ export default function Terms() {
         className="py-20 text-center text-black bg-cover bg-center"
         style={{ backgroundImage: "url('/images/services-bg.jpg')" }}
       >
-        <h1 className="text-3xl md:text-4xl font-bold">
+        <h1 className="mt-10 text-4xl md:text-4xl font-bold">
           Terms & Conditions
         </h1>
       </section>

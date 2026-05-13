@@ -1,3 +1,6 @@
+import TestimonialsSection from "@/app/components/ui/TestimonialsSection";
+import { FaPlane, FaUser, FaPassport } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 export default function TicketingPage() {
   return (
     <main className="bg-[#eef5fb] min-h-screen">
@@ -16,8 +19,8 @@ export default function TicketingPage() {
 <div className="absolute inset-0 bg-white/50"></div>
 
         {/* TEXT */}
-        <div className="relative z-10 px-4">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight">
+        <div className=" relative z-10 px-4">
+          <h1 className="mt-10 text-xl sm:text-4xl md:text-4xl font-bold text-black leading-tight">
             Your Journey Starts Here: Book Your Tickets
             <br />
             Online with Ease
@@ -79,7 +82,10 @@ export default function TicketingPage() {
 
           {/* FLIGHT DETAILS */}
           <div className="mb-6">
-            <p className="text-base font-semibold text-gray-800 mb-4">✈ Flight Details</p>
+          <p className="text-base font-semibold text-gray-800 mb-4 flex items-center gap-2">
+  <FaPlane className="text-blue-600" />
+  Flight Details
+</p>
 
             <div className="grid md:grid-cols-2 gap-4">
 
@@ -128,7 +134,10 @@ export default function TicketingPage() {
 
           {/* PASSENGER INFO */}
           <div className="mb-6">
-            <p className="text-base font-semibold text-gray-800 mb-4">👤 Passenger Information</p>
+            <p className="text-base font-semibold text-gray-800 mb-4 flex items-center gap-2">
+  <FaUser className="text-blue-600" />
+  Passenger Information
+</p>
 
             <div className="grid md:grid-cols-2 gap-4">
 
@@ -177,7 +186,10 @@ export default function TicketingPage() {
 
           {/* PASSPORT INFO */}
           <div className="mb-6">
-            <p className="text-base font-semibold text-gray-800 mb-4">📘 Passport Information</p>
+            <p className="text-base font-semibold text-gray-800 mb-4 flex items-center gap-2">
+  <FaPassport className="text-blue-600" />
+  Passport Information
+</p>
 
             <div className="grid md:grid-cols-2 gap-4">
 
@@ -210,7 +222,10 @@ export default function TicketingPage() {
 
           {/* CONTACT INFO */}
           <div className="mb-6">
-            <p className="text-base font-semibold text-gray-800 mb-4">📧 Contact Information</p>
+            <p className="text-base font-semibold text-gray-800 mb-4 flex items-center gap-2">
+  <MdEmail className="text-blue-600" />
+  Contact Information
+</p>
 
             <div className="grid md:grid-cols-2 gap-4">
 
@@ -251,63 +266,7 @@ export default function TicketingPage() {
 
 
 
- {/* TESTIMONIALS */}
-      <section className="py-12 sm:py-20 px-4 sm:px-8 md:px-16 bg-white text-center">
-
-        <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-8 sm:mb-12">
-          What Our Customers Say
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          {[
-            {
-              name: "Maria Silva",
-              time: "3 Days ago",
-              text: "Authentic Portuguese products, fast delivery, and excellent quality. Highly recommended!",
-            },
-            {
-              name: "Maria Silva",
-              time: "6 Days ago",
-              text: "Great quality Portuguese products with quick delivery. Very satisfied!",
-              highlight: true,
-            },
-            {
-              name: "Ana Ferreira",
-              time: "5 Days ago",
-              text: "Finally authentic items, delivered fast and in perfect condition!",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className={`p-6 rounded-xl shadow ${
-                item.highlight
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-100 text-gray-800"
-              }`}
-            >
-
-              {/* AVATAR */}
-              <div className="w-10 h-10 rounded-full bg-gray-300 mx-auto mb-3"></div>
-
-              {/* NAME */}
-              <h3 className="font-semibold text-sm">{item.name}</h3>
-              <p className="text-xs opacity-70">{item.time}</p>
-
-              {/* STARS */}
-              <div className="text-yellow-400 my-2">★★★★★</div>
-
-              {/* TEXT */}
-              <p className="text-sm">{item.text}</p>
-
-            </div>
-          ))}
-
-        </div>
-
-      </section>
-
-
+ <TestimonialsSection />
 
 
 {/* CTA */}

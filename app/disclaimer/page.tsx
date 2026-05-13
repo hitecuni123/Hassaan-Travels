@@ -23,7 +23,7 @@ export default function Disclaimer() {
           {/* LEFT TEXT */}
           <div className="flex-1 text-sm text-gray-1000 leading-relaxed">
 
-            <h2 className="text-xl sm:text-2xl font-bold mb-5">
+            <h2 className="mt-10 text-xl sm:text-4xl font-bold mb-5">
               Disclaimer <span className="text-blue-600">Hassaan Travel</span>
             </h2>
 

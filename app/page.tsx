@@ -1,3 +1,6 @@
+import TestimonialsSection from "@/app/components/ui/TestimonialsSection";
+
+import { MdSwapHoriz } from "react-icons/md";
 import {
   FaPlane,
   FaBed,
@@ -16,6 +19,7 @@ import {
 import { GiTakeMyMoney } from "react-icons/gi";
 
 import Image from "next/image";
+import ContactSection from "./components/ui/ContactSection";
 export default function Home() {
   return (
     <main className="w-full text-gray-800">
@@ -67,47 +71,67 @@ export default function Home() {
 
   </div>
 
-  {/* SEARCH — still inside the section, video covers it */}
-  <div className="relative z-10 w-full max-w-6xl mx-auto px-4 mt-10">
-    <div className="bg-white rounded-2xl shadow-2xl flex flex-col lg:flex-row items-center overflow-hidden w-full">
 
-{/* FROM */}
-<div className="px-6 py-5 border-b lg:border-b-0 lg:border-r text-center lg:text-left w-full">
-  <p className="text-xs text-gray-400">From</p>
-  <p className="text-sm font-semibold text-gray-800">Amsterdam, Netherlands</p>
-</div>
+<div className="relative z-10 w-full max-w-6xl mx-auto px-4 mt-10">
+  <div className="bg-white rounded-2xl shadow-2xl flex flex-col lg:flex-row items-stretch overflow-hidden">
 
-{/* TO */}
-<div className="px-6 py-5 border-b lg:border-b-0 lg:border-r text-center lg:text-left w-full">
-  <p className="text-xs text-gray-400">To</p>
-  <p className="text-sm font-semibold text-gray-800">Country, City or Airport</p>
-</div>
+    {/* FROM */}
+    <div className="flex-1 px-6 py-4 flex flex-col justify-center relative">
+      <p className="text-xs text-gray-400 mb-1">From</p>
+      <p className="text-sm font-semibold text-gray-800">
+        Amsterdam, Netherlands
+      </p>
 
-{/* DEPART */}
-<div className="px-6 py-5 border-b lg:border-b-0 lg:border-r text-center lg:text-left w-full">
-  <p className="text-xs text-gray-400">Depart</p>
-  <p className="text-sm font-semibold text-gray-800">Add Date</p>
-</div>
+      {/* DARKER BORDER */}
+      <div className="hidden lg:block absolute right-0 top-0 h-full w-[1px] bg-gray-400"></div>
 
-{/* RETURN */}
-<div className="px-6 py-5 border-b lg:border-b-0 lg:border-r text-center lg:text-left w-full">
-  <p className="text-xs text-gray-400">Return</p>
-  <p className="text-sm font-semibold text-gray-800">Add Date</p>
-</div>
-
-{/* TRAVELLERS */}
-<div className="px-6 py-5 border-b lg:border-b-0 lg:border-r text-center lg:text-left w-full">
-  <p className="text-xs text-gray-400">Travellers & Cabin Class</p>
-  <p className="text-sm font-semibold text-gray-800">1 Adult, Economy</p>
-</div>
-
-      {/* BUTTON */}
-      <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-10 py-5 font-semibold whitespace-nowrap w-full lg:w-auto">
-        Subscribe
-      </button>
-
+      {/* SWAP ICON ON BORDER */}
+      <div className="hidden lg:flex absolute right-[-18px] top-1/2 -translate-y-1/2 z-20">
+        <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-500 text-blue-500 bg-white shadow-md">
+          <MdSwapHoriz className="text-xl" />
+        </div>
+      </div>
     </div>
+
+    {/* TO */}
+    <div className="flex-1 px-6 py-4 flex flex-col justify-center relative">
+      <p className="text-xs text-gray-400 mb-1">To</p>
+      <p className="text-sm font-semibold text-gray-800">
+        Country, City or Airport
+      </p>
+      <div className="hidden lg:block absolute right-0 top-0 h-full w-[1px] bg-gray-400"></div>
+    </div>
+
+    {/* DEPART */}
+    <div className="flex-1 px-6 py-4 flex flex-col justify-center relative">
+      <p className="text-xs text-gray-400 mb-1">Depart</p>
+      <p className="text-sm font-semibold text-gray-800">Add Date</p>
+      <div className="hidden lg:block absolute right-0 top-0 h-full w-[1px] bg-gray-400"></div>
+    </div>
+
+    {/* RETURN */}
+    <div className="flex-1 px-6 py-4 flex flex-col justify-center relative">
+      <p className="text-xs text-gray-400 mb-1">Return</p>
+      <p className="text-sm font-semibold text-gray-800">Add Date</p>
+      <div className="hidden lg:block absolute right-0 top-0 h-full w-[1px] bg-gray-400"></div>
+    </div>
+
+    {/* TRAVELLERS (NO BORDER AFTER THIS) */}
+    <div className="flex-1 px-6 py-4 flex flex-col justify-center">
+      <p className="text-xs text-gray-400 mb-1">Travellers & Cabin Class</p>
+      <p className="text-sm font-semibold text-gray-800">
+        1 Adult, Economy
+      </p>
+    </div>
+
+    {/* BUTTON */}
+    <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-10 py-4 font-semibold whitespace-nowrap w-full lg:w-auto">
+      Search
+    </button>
+
   </div>
+</div>
+
 
 </section>
       {/* POPULAR TOUR PACKAGES */}
@@ -181,122 +205,94 @@ export default function Home() {
       </section>
 
 {/* EXPERT VISA SOLUTIONS */}
-<section
-  className="py-12 sm:py-20 px-4 sm:px-8 md:px-16 bg-cover bg-center bg-no-repeat relative"
-  style={{ backgroundImage: "url('/images/tour.webp')" }}
->
+<section className="relative py-12 sm:py-20 px-4 sm:px-8 md:px-16 overflow-hidden">
 
-  {/* TITLE */}
-  <h2 className="text-3xl sm:text-4xl font-bold">
-    Expert Visa <span className="text-blue-600">Solutions</span>
-  </h2>
+  {/* ✅ BACKGROUND IMAGE (FIXED WAY) */}
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 pointer-events-none"
+    style={{ backgroundImage: "url('/images/tour.jpg')" }}
+  />
 
-  <p className="text-gray-600 mt-2 mb-12 px-2">
-    Streamlined processing with guaranteed approval for all destinations
-  </p>
-{/* CARDS */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-0 sm:px-4 md:px-8">
 
-  {[
-    {
-      title: "Flight Booking",
-      desc: "Book affordable flights with flexible options for individuals and families.",
-      icon: <FaPlane />,
-    },
-    {
-      title: "Hotel Reservations",
-      desc: "Comfortable accommodations in Makkah, Madinah and worldwide destinations.",
-      icon: <FaBed />,
-    },
-    {
-      title: "Visa Processing",
-      desc: "Fast and reliable visa services ensuring smooth approval for travelers.",
-      icon: <FaFileAlt />,
-    },
-    {
-      title: "24/7 Support",
-      desc: "Round-the-clock customer support for all your travel needs.",
-      icon: <FaHeadset />,
-    },
-  ].map((item, i) => (
+  {/* ✅ CONTENT (IMPORTANT z-10) */}
+  <div className="relative z-10">
 
-    <div
-      key={i}
-      className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-left"
-    >
+    {/* TITLE */}
+    <h2 className="text-4xl sm:text-5xl font-bold text-white">
+      Expert Visa <span className="text-blue-400">Solutions</span>
+    </h2>
 
-      {/* ICON LEFT */}
-      <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500 text-white text-xl mb-4">
-        {item.icon}
-      </div>
+    <p className="text-black-500 mt-2 mb-12 px-2">
+      Streamlined processing with guaranteed approval for all destinations
+    </p>
 
-      {/* TEXT */}
-      <h3 className="font-semibold text-lg mb-2">
-        {item.title}
-      </h3>
+    {/* CARDS */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
 
-      <p className="text-sm text-gray-500 leading-relaxed">
-        {item.desc}
-      </p>
+      {[
+        {
+          title: "Flight Booking",
+          desc: "Book affordable flights with flexible options for individuals and families.",
+          icon: <FaPlane />,
+        },
+        {
+          title: "Hotel Reservations",
+          desc: "Comfortable accommodations in Makkah, Madinah and worldwide destinations.",
+          icon: <FaBed />,
+        },
+        {
+          title: "Visa Processing",
+          desc: "Fast and reliable visa services ensuring smooth approval for travelers.",
+          icon: <FaFileAlt />,
+        },
+        {
+          title: "24/7 Support",
+          desc: "Round-the-clock customer support for all your travel needs.",
+          icon: <FaHeadset />,
+        },
+      ].map((item, i) => (
+
+        <div
+          key={i}
+          className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-left"
+        >
+          <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500 text-white text-xl mb-4">
+            {item.icon}
+          </div>
+
+          <h3 className="font-semibold text-lg mb-2">
+            {item.title}
+          </h3>
+
+          <p className="text-sm text-gray-500 leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+
+      ))}
 
     </div>
 
-  ))}
+    {/* PARTNERS */}
+    <div className="mt-16">
 
-</div>
+      <p className="text-sm text-gray-200 mb-6">
+        Our Services Partners
+      </p>
 
-{/* PARTNERS */}
-<div className="mt-16">
+      <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-90">
 
-  <p className="text-sm text-gray-600 mb-6">
-    Our Services Partners
-  </p>
+        <Image src="/images/etihad.png" alt="Etihad Airways" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
+        <Image src="/images/qatar.png" alt="Qatar Airways" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
+        <Image src="/images/pia.png" alt="PIA" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
+        <Image src="/images/emirates.png" alt="Emirates" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
+        <Image src="/images/saudia.png" alt="Saudia" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
 
-  <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-90">
+      </div>
 
-    <Image
-      src="/images/etihad.png"
-      alt="Etihad Airways"
-      width={140}
-      height={50}
-      className="h-8 sm:h-10 w-auto object-contain"
-    />
-
-    <Image
-      src="/images/qatar.png"
-      alt="Qatar Airways"
-      width={140}
-      height={50}
-      className="h-8 sm:h-10 w-auto object-contain"
-    />
-
-    <Image
-      src="/images/pia.png"
-      alt="PIA"
-      width={140}
-      height={50}
-      className="h-8 sm:h-10 w-auto object-contain"
-    />
-
-    <Image
-      src="/images/emirates.png"
-      alt="Emirates"
-      width={140}
-      height={50}
-      className="h-8 sm:h-10 w-auto object-contain"
-    />
-
-    <Image
-      src="/images/saudia.png"
-      alt="Saudia"
-      width={140}
-      height={50}
-      className="h-8 sm:h-10 w-auto object-contain"
-    />
+    </div>
 
   </div>
-
-</div>
 </section>
 
       {/* FIVE STAR HOTEL EXPERIENCE */}
@@ -423,161 +419,12 @@ export default function Home() {
 
       </section>
 
-      {/* CONTACT / MAP SECTION */}
-<section
-  className="py-12 sm:py-20 px-4 sm:px-8 md:px-16 bg-cover bg-center bg-no-repeat relative"
-  style={{ backgroundImage: "url('/images/tour.jpg')" }}
->
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+      
+<ContactSection />
 
-         <div className="order-last lg:order-first h-full">
-  <iframe
-    src="https://www.google.com/maps?q=Dordtselaan+67D,+3081BG+Rotterdam,+Netherlands&output=embed"
-    className="rounded-xl shadow-lg w-full h-full min-h-[500px]"
-    loading="lazy"
-  ></iframe>
-</div>
+     
+<TestimonialsSection />
 
-{/* RIGHT SIDE */}
-<div className="space-y-4 sm:space-y-6 h-full flex flex-col justify-between">
-
-  {/* LOCATION CARD */}
-  <div className="bg-white/70 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow flex gap-4 items-start">
-    
-    <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg text-lg">
-      <MdLocationOn />
-    </div>
-
-    <div>
-      <h3 className="font-semibold">Rotterdam</h3>
-      <p className="text-sm text-gray-500">
-        Dordtselaan 67D, 3081BG Rotterdam, Netherlands
-      </p>
-      <p className="text-xs text-gray-400 mt-2">
-        Monday - Saturday <br /> Sunday: Closed
-      </p>
-    </div>
-
-  </div>
-
-  {/* FORM */}
-  <div className="bg-white/70 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow space-y-4">
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <input
-        type="text"
-        placeholder="Your Name"
-        className="border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none p-3 rounded-lg text-sm w-full transition"
-      />
-
-      <input
-        type="email"
-        placeholder="your@email.com"
-        className="border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none p-3 rounded-lg text-sm w-full transition"
-      />
-    </div>
-
-    <textarea
-      placeholder="Tell us about your travel plans..."
-      className="border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none p-3 rounded-lg text-sm w-full transition"
-      rows={3}
-    ></textarea>
-
-    <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-6 py-2 rounded-lg text-sm w-full sm:w-auto shadow-md hover:shadow-lg">
-      Send Now
-    </button>
-
-  </div>
-
-  {/* PHONE */}
-  <div className="bg-white/70 backdrop-blur-md p-4 sm:p-5 rounded-xl shadow flex items-center gap-4">
-
-    <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg text-lg">
-      <MdPhone />
-    </div>
-
-    <div>
-      <p className="text-xs text-gray-400">Phone</p>
-      <p className="text-sm font-medium">+31 104857673</p>
-    </div>
-
-  </div>
-
-  {/* EMAIL */}
-  <div className="bg-white/70 backdrop-blur-md p-4 sm:p-5 rounded-xl shadow flex items-center gap-4">
-
-    <div className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-lg text-lg">
-      <MdEmail />
-    </div>
-
-    <div>
-      <p className="text-xs text-gray-400">Email</p>
-      <p className="text-sm font-medium">info@hassaantravel.nl</p>
-    </div>
-
-  </div>
-
-</div>
-
-        </div>
-
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="py-12 sm:py-20 px-4 sm:px-8 md:px-16 bg-white text-center">
-
-        <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-8 sm:mb-12">
-          What Our Customers Say
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          {[
-            {
-              name: "Maria Silva",
-              time: "3 Days ago",
-              text: "Authentic Portuguese products, fast delivery, and excellent quality. Highly recommended!",
-            },
-            {
-              name: "Maria Silva",
-              time: "6 Days ago",
-              text: "Great quality Portuguese products with quick delivery. Very satisfied!",
-              highlight: true,
-            },
-            {
-              name: "Ana Ferreira",
-              time: "5 Days ago",
-              text: "Finally authentic items, delivered fast and in perfect condition!",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className={`p-6 rounded-xl shadow ${
-                item.highlight
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-100 text-gray-800"
-              }`}
-            >
-
-              {/* AVATAR */}
-              <div className="w-10 h-10 rounded-full bg-gray-300 mx-auto mb-3"></div>
-
-              {/* NAME */}
-              <h3 className="font-semibold text-sm">{item.name}</h3>
-              <p className="text-xs opacity-70">{item.time}</p>
-
-              {/* STARS */}
-              <div className="text-yellow-400 my-2">★★★★★</div>
-
-              {/* TEXT */}
-              <p className="text-sm">{item.text}</p>
-
-            </div>
-          ))}
-
-        </div>
-
-      </section>
 
       {/* CTA SECTION */}
       <section className="py-12 sm:py-20 px-4 text-center bg-gradient-to-r from-[#1ea7d7] to-[#0f7db0] text-white">

@@ -18,9 +18,9 @@ export default function PackagesPage() {
   </div>
 
   {/* CONTENT */}
-  <div className="max-w-2xl mx-auto flex flex-col items-center justify-center">
+  <div className=" mx-auto flex flex-col items-center justify-center">
 
-    <h1 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-black leading-snug mb-3">
+    <h1 className="mt-20 text-lg sm:text-2xl md:text-3xl font-extrabold text-black leading-snug mb-3">
       Pakistani Family & Tourist Visa Services <br />
       Hassaan Travel - Simple & Fast Processing
     </h1>
@@ -29,10 +29,7 @@ export default function PackagesPage() {
       Apply online for a Pakistani Family & Tourist visa today! Fast approvals & expert help.
     </p>
 
-    <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-semibold text-sm transition">
-      Apply For Family Visa Now
-    </button>
-
+ 
   </div>
 </section>
 
