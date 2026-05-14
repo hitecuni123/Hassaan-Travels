@@ -140,13 +140,12 @@ const UmrahPage: React.FC = () => {
         </ul>
       </div>
 
-      {/* IMAGE */}
-      <div className="flex-1">
-        <img
-          src="/assets/umrah/kaba.webp"
-          className="rounded-xl w-full h-[240px] object-cover"
-        />
-      </div>
+     <div className="flex-1">
+  <img
+    src="/assets/umrah/kaba.webp"
+    className="rounded-xl w-[370px] h-[270px] object-cover ml-auto"
+  />
+</div>
     </div>
 
   </div>

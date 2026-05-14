@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function WhySection() {
   return (
@@ -70,9 +71,11 @@ export default function WhySection() {
 
           </div>
 
-          <button className="mt-10 bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold shadow-lg">
-            Contact Us Today
-          </button>
+         <Link href="/contact">
+  <button className="mt-10 bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold shadow-lg">
+    Contact Us Today
+  </button>
+</Link>
 
         </div>
       </div>

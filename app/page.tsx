@@ -1,5 +1,9 @@
-import TestimonialsSection from "@/app/components/ui/TestimonialsSection";
+"use client";
 
+import { useState } from "react";
+import "react-datepicker/dist/react-datepicker.css";
+
+import TestimonialsSection from "@/app/components/ui/TestimonialsSection";
 import { MdSwapHoriz } from "react-icons/md";
 import {
   FaPlane,
@@ -8,7 +12,9 @@ import {
   FaHeadset,
   FaCheck,
   FaStar
-} from "react-icons/fa";
+} from "react-icons/fa";``
+
+
 
 import {
   MdLocationOn,
@@ -21,6 +27,33 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import Image from "next/image";
 import ContactSection from "./components/ui/ContactSection";
 export default function Home() {
+
+const countries = [
+    "Pakistan",
+    "Netherlands",
+    "Saudi Arabia",
+    "UAE",
+    "Turkey",
+    "Thailand",
+    "Malaysia",
+    "UK",
+    "USA",
+  ];
+
+  // --- ADDED STATE VARIABLES HERE ---
+  const [from, setFrom] = useState("Amsterdam, Netherlands");
+  const [to, setTo] = useState("");
+  const [travellers, setTravellers] = useState("1 Adult, Economy");
+
+  // Date States
+  const [departDate, setDepartDate] = useState<Date | null>(null);
+  const [returnDate, setReturnDate] = useState<Date | null>(null);
+  
+  // Visibility States
+  const [openDepart, setOpenDepart] = useState(false);
+  const [openReturn, setOpenReturn] = useState(false);
+ 
+  
   return (
     <main className="w-full text-gray-800">
 
@@ -72,68 +105,132 @@ export default function Home() {
   </div>
 
 
-<div className="relative z-10 w-full max-w-6xl mx-auto px-4 mt-10">
-  <div className="bg-white rounded-2xl shadow-2xl flex flex-col lg:flex-row items-stretch overflow-hidden">
+        {/* SEARCH BAR */}
 
-    {/* FROM */}
-    <div className="flex-1 px-6 py-4 flex flex-col justify-center relative">
-      <p className="text-xs text-gray-400 mb-1">From</p>
-      <p className="text-sm font-semibold text-gray-800">
-        Amsterdam, Netherlands
-      </p>
+        <div className="relative z-50 pointer-events-auto"></div>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 mt-10">
+          <div className="bg-white rounded-2xl shadow-2xl flex flex-col lg:flex-row items-stretch overflow-hidden border border-gray-200">
+            
+            {/* FROM */}
+            <div className="flex-1 px-6 py-5 border-b lg:border-b-0 lg:border-r text-left">
+              <p className="text-xs text-gray-400 mb-1">From</p>
+              <select
+                value={from}
+                onChange={(e) => setFrom(e.target.value)}
+                className="w-full text-sm font-semibold text-gray-800 outline-none bg-transparent"
+              >
+                {countries.map((c) => <option key={c}>{c}</option>)}
+              </select>
+            </div>
 
-      {/* DARKER BORDER */}
-      <div className="hidden lg:block absolute right-0 top-0 h-full w-[1px] bg-gray-400"></div>
+            {/* TO */}
+            <div className="flex-1 px-6 py-5 border-b lg:border-b-0 lg:border-r text-left">
+              <p className="text-xs text-gray-400 mb-1">To</p>
+              <select
+                value={to}
+                onChange={(e) => setTo(e.target.value)}
+                className="w-full text-sm font-semibold text-gray-800 outline-none bg-transparent"
+              >
+                <option value="">Select Destination</option>
+                {countries.map((c) => <option key={c}>{c}</option>)}
+              </select>
+            </div>
 
-      {/* SWAP ICON ON BORDER */}
-      <div className="hidden lg:flex absolute right-[-18px] top-1/2 -translate-y-1/2 z-20">
-        <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-500 text-blue-500 bg-white shadow-md">
-          <MdSwapHoriz className="text-xl" />
-        </div>
-      </div>
+            {/* DEPART SECTION */}
+<div className="flex-1 px-6 py-5 border-b lg:border-b-0 lg:border-r relative">
+  <p className="text-xs text-gray-400 mb-1 font-bold uppercase tracking-wider">Depart</p>
+  <button
+    type="button"
+    onClick={() => {
+      setOpenDepart(!openDepart);
+      setOpenReturn(false); // Close the other one if open
+    }}
+    className="w-full text-left text-sm font-semibold text-gray-800 flex items-center gap-2"
+  >
+    <span className="text-blue-500">📅</span>
+    <span className="truncate">
+      {departDate ? departDate.toLocaleDateString() : "Select date"}
+    </span>
+  </button>
+
+  {openDepart && (
+    <div className="absolute top-full left-0 mt-2 z-[100] bg-white shadow-2xl rounded-lg p-2 border border-gray-200">
+      <input
+        type="date"
+        autoFocus
+        className="outline-none p-2 text-sm text-black"
+        onChange={(e) => {
+          if (e.target.value) {
+            setDepartDate(new Date(e.target.value));
+            setOpenDepart(false);
+          }
+        }}
+        onBlur={() => setTimeout(() => setOpenDepart(false), 200)}
+      />
     </div>
-
-    {/* TO */}
-    <div className="flex-1 px-6 py-4 flex flex-col justify-center relative">
-      <p className="text-xs text-gray-400 mb-1">To</p>
-      <p className="text-sm font-semibold text-gray-800">
-        Country, City or Airport
-      </p>
-      <div className="hidden lg:block absolute right-0 top-0 h-full w-[1px] bg-gray-400"></div>
-    </div>
-
-    {/* DEPART */}
-    <div className="flex-1 px-6 py-4 flex flex-col justify-center relative">
-      <p className="text-xs text-gray-400 mb-1">Depart</p>
-      <p className="text-sm font-semibold text-gray-800">Add Date</p>
-      <div className="hidden lg:block absolute right-0 top-0 h-full w-[1px] bg-gray-400"></div>
-    </div>
-
-    {/* RETURN */}
-    <div className="flex-1 px-6 py-4 flex flex-col justify-center relative">
-      <p className="text-xs text-gray-400 mb-1">Return</p>
-      <p className="text-sm font-semibold text-gray-800">Add Date</p>
-      <div className="hidden lg:block absolute right-0 top-0 h-full w-[1px] bg-gray-400"></div>
-    </div>
-
-    {/* TRAVELLERS (NO BORDER AFTER THIS) */}
-    <div className="flex-1 px-6 py-4 flex flex-col justify-center">
-      <p className="text-xs text-gray-400 mb-1">Travellers & Cabin Class</p>
-      <p className="text-sm font-semibold text-gray-800">
-        1 Adult, Economy
-      </p>
-    </div>
-
-    {/* BUTTON */}
-    <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-10 py-4 font-semibold whitespace-nowrap w-full lg:w-auto">
-      Search
-    </button>
-
-  </div>
+  )}
 </div>
 
+{/* RETURN SECTION */}
+<div className="flex-1 px-6 py-5 border-b lg:border-b-0 lg:border-r relative">
+  <p className="text-xs text-gray-400 mb-1 font-bold uppercase tracking-wider">Return</p>
+  <button
+    type="button"
+    onClick={() => {
+      setOpenReturn(!openReturn);
+      setOpenDepart(false); // Close the other one if open
+    }}
+    className="w-full text-left text-sm font-semibold text-gray-800 flex items-center gap-2"
+  >
+    <span className="text-blue-500">📅</span>
+    <span className="truncate">
+      {returnDate ? returnDate.toLocaleDateString() : "Select date"}
+    </span>
+  </button>
 
-</section>
+  {openReturn && (
+    <div className="absolute top-full left-0 mt-2 z-[100] bg-white shadow-2xl rounded-lg p-2 border border-gray-200">
+      <input
+        type="date"
+        autoFocus
+        className="outline-none p-2 text-sm text-black"
+        onChange={(e) => {
+          if (e.target.value) {
+            setReturnDate(new Date(e.target.value));
+            setOpenReturn(false);
+          }
+        }}
+        onBlur={() => setTimeout(() => setOpenReturn(false), 200)}
+      />
+    </div>
+  )}
+</div>
+            {/* TRAVELLERS */}
+            <div className="flex-1 px-6 py-5 border-b lg:border-b-0 lg:border-r text-left">
+              <p className="text-xs text-gray-400 mb-1">Travellers & Cabin</p>
+              <select
+                value={travellers}
+                onChange={(e) => setTravellers(e.target.value)}
+                className="w-full text-sm font-semibold text-gray-800 outline-none bg-transparent"
+              >
+                <option>1 Adult, Economy</option>
+                <option>2 Adults, Economy</option>
+                <option>1 Adult, Business</option>
+                <option>2 Adults, Business</option>
+                <option>Family, Economy</option>
+              </select>
+            </div>
+
+            <button
+              onClick={() => console.log({ from, to, departDate, returnDate, travellers })}
+              className="bg-blue-500 hover:bg-blue-600 transition text-white px-10 py-5 font-semibold w-full lg:w-auto"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </section>
+      
       {/* POPULAR TOUR PACKAGES */}
       <section
   className="py-12 sm:py-20 px-4 sm:px-8 md:px-16 bg-cover bg-center bg-no-repeat relative"
@@ -273,26 +370,46 @@ export default function Home() {
 
     </div>
 
-    {/* PARTNERS */}
-    <div className="mt-16">
+ 
+<div className="mt-16 overflow-hidden">
 
-      <p className="text-sm text-gray-200 mb-6">
-        Our Services Partners
-      </p>
+  <p className="text-sm text-gray-200 mb-6 text-center">
+    Our Services Partners
+  </p>
 
-      <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-90">
+  <div className="relative w-full overflow-hidden">
 
-        <Image src="/images/etihad.png" alt="Etihad Airways" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
-        <Image src="/images/qatar.png" alt="Qatar Airways" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
-        <Image src="/images/pia.png" alt="PIA" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
-        <Image src="/images/emirates.png" alt="Emirates" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
-        <Image src="/images/saudia.png" alt="Saudia" width={140} height={50} className="h-8 sm:h-10 w-auto object-contain" />
+    <div className="flex w-max animate-scroll items-center">
 
-      </div>
+      {[
+        "/images/etihad.png",
+        "/images/qatar.png",
+        "/images/pia.png",
+        "/images/emirates.png",
+        "/images/saudia.png",
+
+        "/images/etihad.png",
+        "/images/qatar.png",
+        "/images/pia.png",
+        "/images/emirates.png",
+        "/images/saudia.png",
+      ].map((src, i) => (
+        <Image
+          key={i}
+          src={src}
+          alt="partner"
+          width={200}
+          height={100}
+          className="h-14 sm:h-16 w-auto object-contain mx-16"
+        />
+      ))}
 
     </div>
 
   </div>
+</div>
+
+</div>
 </section>
 
       {/* FIVE STAR HOTEL EXPERIENCE */}

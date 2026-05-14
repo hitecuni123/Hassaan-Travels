@@ -36,49 +36,62 @@ export default function FaqSection() {
     <section className="bg-[#f4f4f4] py-20 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
 
-        {/* LEFT SIDE */}
-        <div className="flex flex-col justify-between h-[520px]">
+    {/* LEFT SIDE */}
+<div className="flex flex-col justify-between h-auto md:h-[520px]">
 
-          <div className="grid grid-cols-2 gap-6">
-
-            <img
-              src="/images/f1.webp"
-              alt=""
-              className="h-[380px] w-full object-cover rounded-2xl shadow-lg"
-            />
-
-            <div className="flex flex-col gap-6">
-              <img
-                src="/images/f2.webp"
-                alt=""
-                className="h-[150px] w-full object-cover rounded-2xl shadow-lg"
-              />
-              <img
-                src="/images/f3.webp"
-                alt=""
-                className="h-[320px] w-full object-cover rounded-2xl shadow-lg"
-              />
-            </div>
-
-          </div>
-<div className="h-[100px] w-[270px] relative -top-[90px] border border-blue-400 rounded-lg px-10 py-6 flex items-start justify-center bg-white shadow-sm">
-  
-  <div className="flex items-center gap-3 mt-2">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
     <img
-      src="/images/f4.webp"
-      alt="icon"
-      className="w-8 h-8 object-contain"
+      src="/images/f1.webp"
+      alt=""
+      className="h-[220px] md:h-[380px] w-full object-cover rounded-2xl shadow-lg"
     />
 
-    <span className="text-gray-700 text-sm font-medium">
-      Lets Explore!
-    </span>
+    <div className="flex flex-col gap-4 md:gap-6">
+      <img
+        src="/images/f2.webp"
+        alt=""
+        className="h-[220px] md:h-[150px] w-full object-cover rounded-2xl shadow-lg"
+      />
+      <img
+        src="/images/f3.webp"
+        alt=""
+        className="h-[220px] md:h-[320px] w-full object-cover rounded-2xl shadow-lg"
+      />
+    </div>
+
+  </div>
+
+<div className="
+  h-[100px] w-full md:w-[270px]
+  border border-blue-400 rounded-lg
+  px-6 md:px-10 py-6
+  flex items-start justify-center
+  bg-white shadow-sm
+  mx-auto md:mx-0
+
+  mt-6 md:mt-0
+
+  md:relative 
+  md:-top-16 
+  lg:-top-20 
+  xl:-top-[90px]
+">
+    
+    <div className="flex items-center gap-3 mt-2">
+      <img
+        src="/images/f4.webp"
+        alt="icon"
+        className="w-8 h-8 object-contain"
+      />
+      <span className="text-gray-700 text-sm font-medium">
+        Lets Explore!
+      </span>
+    </div>
 
   </div>
 
 </div>
-        </div>
 
         {/* RIGHT SIDE FAQ */}
         <div>

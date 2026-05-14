@@ -9,27 +9,37 @@ export default function Disclaimer() {
         className="py-20 text-center text-black bg-cover bg-center"
         style={{ backgroundImage: "url('/images/services-bg.jpg')" }}
       >
-        <h1 className="text-3xl md:text-4xl font-bold">
+        <h1 className="mb-6 text-3xl md:text-4xl font-bold">
           Disclaimer
         </h1>
       </section>
 
-      {/* CONTENT AREA */}
+      {/* CONTENT */}
       <section className="bg-[#cfe3ec] py-12 px-4 sm:px-8 md:px-16">
 
-        {/* CARD */}
-        <div className="max-w-6xl mx-auto bg-[#D9D9D9] rounded-2xl shadow-xl p-6 sm:p-10 flex flex-col lg:flex-row items-center gap-10">
+       <div className="max-w-5xl mx-auto bg-[#D9D9D9] rounded-2xl shadow-xl px-10 py-12">
 
-          {/* LEFT TEXT */}
-          <div className="flex-1 text-sm text-gray-1000 leading-relaxed">
+          {/* TITLE */}
+          <h2 className="text-2xl sm:text-4xl font-bold mb-12">
+            Disclaimer <span className="text-blue-600">Hassaan Travel</span>
+          </h2>
 
-            <h2 className="mt-10 text-xl sm:text-4xl font-bold mb-5">
-              Disclaimer <span className="text-blue-600">Hassaan Travel</span>
-            </h2>
+          {/* 🔴 F
+          ULL WIDTH TEXT (TOP) */}
+          <p className="mb-6 text-sm leading-relaxed mt-6">
+            Op de website van Hassaan Travel (hierna 'HT') wordt enkel inhoud getoond die met grote zorgvuldigheid is samengesteld. Het kan echter zo zijn dat bepaalde getoonde inhoud en/of informatie niet langer kloppend is vanwege het feit dat dit is verouderd of omdat bepaalde informatie na verloop van tijd niet meer actueel is. HT kan hier niet voor aansprakelijk worden gesteld. Tevens kan HT niet aansprakelijk worden gesteld voor schades die voortvloeien uit de getoonde inhoud.
+          </p>
 
-            <p className="mb-4">
-              Op de website van Hassaan Travel (hierna 'HT') wordt enkel inhoud getoond die met grote zorgvuldigheid is samengesteld. Het kan echter zo zijn dat bepaalde getoonde inhoud en/of informatie niet langer kloppend is vanwege het feit dat dit is verouderd of omdat bepaalde informatie na verloop van tijd niet meer actueel is. HT kan hier niet voor aansprakelijk worden gesteld. Tevens kan HT niet aansprakelijk worden gesteld voor schades die voortvloeien uit de getoonde inhoud.
-            </p>
+          {/* 🔥 FLOAT SECTION START */}
+          <Image
+            src="/assets/disclaimer/dis.webp"
+            alt="Warning"
+            width={320}
+            height={320}
+            className="float-right ml-10 mb-6 mt-2 object-contain"
+          />
+
+          <div className="text-sm leading-relaxed">
 
             <p className="mb-4">
               Daarnaast kan HT niet aansprakelijk worden gesteld voor inhoud van derden partijen die wordt getoond op haar website.
@@ -49,16 +59,7 @@ export default function Disclaimer() {
 
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="w-full lg:w-[260px] flex justify-center lg:justify-end">
-            <Image
-              src="/assets/disclaimer/dis.webp"
-              alt="Warning"
-              width={240}
-              height={240}
-              className="object-contain"
-            />
-          </div>
+          <div className="clear-both"></div>
 
         </div>
 
