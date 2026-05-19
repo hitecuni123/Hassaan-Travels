@@ -1,38 +1,22 @@
 import TestimonialsSection from "@/app/components/ui/TestimonialsSection";
 import { FaPlane, FaUser, FaPassport } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import HeroSection from "../components/ui/HeroSection";
 export default function TicketingPage() {
   return (
     <main className="bg-[#eef5fb] min-h-screen">
 
-      {/* HERO SECTION */}
-      <section className="relative h-[260px] md:h-[320px] flex items-center justify-center text-center">
 
-        {/* BACKGROUND IMAGE */}
-        <img
-          src="/images/contact-bg.jpg"
-          alt="Ticketing"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* OVERLAY */}
-<div className="absolute inset-0 bg-white/50"></div>
-
-        {/* TEXT */}
-        <div className=" relative z-10 px-4">
-          <h1 className="mt-10 text-xl sm:text-4xl md:text-4xl font-bold text-black leading-tight">
-            Your Journey Starts Here: Book Your Tickets
-            <br />
-            Online with Ease
-          </h1>
-
-          <p className="text-xs sm:text-sm text-black mt-3">
-            Fast, Secure, and Reliable Ticket Booking for Every Traveler
-          </p>
-        </div>
-      </section>
-
-     
+<HeroSection
+  title={
+    <>
+      Your Journey Starts Here: Book Your Tickets
+      <br />
+      Online with Ease
+    </>
+  }
+  subtitle="Fast, Secure, and Reliable Ticket Booking for Every Traveler"
+/>
 
 
 

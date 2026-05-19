@@ -1,18 +1,14 @@
 import Image from "next/image";
+import HeroSection from "../components/ui/HeroSection";
 
 export default function Disclaimer() {
   return (
     <main className="w-full text-gray-800">
 
-      {/* HERO */}
-      <section
-        className="py-20 text-center text-black bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/services-bg.jpg')" }}
-      >
-        <h1 className="mb-6 text-3xl md:text-4xl font-bold">
-          Disclaimer
-        </h1>
-      </section>
+     <HeroSection
+  title="Disclaimer"
+  subtitle=""
+/>
 
       {/* CONTENT */}
       <section className="bg-[#cfe3ec] py-12 px-4 sm:px-8 md:px-16">

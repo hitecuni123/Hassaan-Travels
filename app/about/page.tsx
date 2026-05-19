@@ -5,243 +5,164 @@ import { MdEmail } from "react-icons/md";
 import { BsClockFill } from "react-icons/bs";
 import { FaGlobe, FaPlane, FaLock } from "react-icons/fa";
 import { FaBullseye, FaEye } from "react-icons/fa";
+import HeroSection from "../components/ui/HeroSection";
+
 
 export default function AboutPage() {
   return (
     <main className="w-full text-gray-800">
 
-
-
- {/* HERO SECTION */}
-      <section className="relative h-[260px] md:h-[320px] flex items-center justify-center text-center">
-
-        {/* BACKGROUND IMAGE */}
-        <img
-          src="/images/contact-bg.jpg"
-          alt="Ticketing"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* OVERLAY */}
-<div className="absolute inset-0 bg-white/50"></div>
-
-        {/* TEXT */}
-        <div className="relative z-10 px-4">
-          <h1 className="mt-10 text-xl sm:text-4xl md:text-4xl font-bold text-black leading-tight">
-            Netherlands Visa Services for Pakistani & UAE 
+      {/* HERO (NO BG HERE) */}
+      <HeroSection
+        title={
+          <>
+            Netherlands Visa Services for Pakistani & UAE
             <br />
             Citizens
-          </h1>
+          </>
+        }
+        subtitle="Expert Visa Services for Pakistani and UAE Travelers."
+      />
 
-          <p className="text-xs sm:text-sm text-black mt-3">
-           Expert Visa Services for Pakistani and UAE Travelers.
-          </p>
-        </div>
-      </section>
+      {/* BG WRAPPER (ONLY BELOW HERO) */}
+      <div className="relative overflow-hidden">
 
-    
-
- <section className="relative py-20 px-6 bg-[#eaf4fb] overflow-hidden">
-
-      {/* CONTENT WRAPPER */}
-      {/* CONTENT WRAPPER */}
-<div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
-  {/* LEFT SIDE */}
-  <div>
-
-    {/* TAG */}
-    <span className="inline-block bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full mb-4">
-      OUR STORY
-    </span>
-
-    {/* HEADING */}
-    <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-      IATA Recognized <br />
-      <span className="text-blue-600">Partners</span>
-    </h2>
-
-    {/* TEXT */}
-    <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-      HassaanTravel is a leading IATA-authorized and recognized travel agency,
-      specializing in tailored travel solutions to South Asia and pilgrimage journeys to Saudi Arabia.
-      With over 15 years of industry expertise, we have earned a reputation for reliability,
-      professionalism, and exceptional service.
-    </p>
-
-    <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-      Since our establishment in 2009, we have been committed to providing seamless,
-      hassle-free travel experiences. Our dedicated team of experts offers personalized guidance,
-      ensuring that every journey aligns with your preferences, schedule, and budget.
-    </p>
-
-    <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-      Whether you're visiting loved ones, exploring new destinations, or embarking on a sacred pilgrimage,
-      we take care of every detail—from flights and accommodations to visas and transportation.
-    </p>
-
-    {/* FEATURES */}
-    <div className="grid grid-cols-2 gap-4 mt-6">
-
-      <div className="bg-white rounded-xl shadow p-4 text-sm font-medium flex items-center gap-2">
-        <FaGlobe className="text-blue-600" />
-        IATA Certified
-      </div>
-
-      <div className="bg-white rounded-xl shadow p-4 text-sm font-medium flex items-center gap-2">
-        <FaPlane className="text-blue-600" />
-        200+ Destinations
-      </div>
-
-      <div className="bg-white rounded-xl shadow p-4 text-sm font-medium flex items-center gap-2">
-        <FaHeart className="text-red-500" />
-        50K+ Customers
-      </div>
-
-      <div className="bg-white rounded-xl shadow p-4 text-sm font-medium flex items-center gap-2">
-        <FaLock className="text-green-600" />
-        Secure Bookings
-      </div>
-
-    </div>
-
-    {/* BUTTON */}
-    <button className="mt-6 bg-green-200 text-green-800 text-xs px-4 py-2 rounded-full">
-      OUR COMMITMENT
-    </button>
-
-  </div>
-
-  {/* RIGHT SIDE */}
-  <div className="relative">
-
-    {/* IMAGE */}
-    <img
-      src="/assets/about/1.webp"
-      alt="Map"
-      className="rounded-2xl shadow-lg w-full h-[420px] object-cover"
-    />
-
-    {/* FLOATING CARD */}
-    <div className="absolute bottom-6 left-6 bg-white border-2 border-blue-200 rounded-xl p-5 shadow-lg w-[220px]">
-      <h3 className="text-blue-600 text-2xl font-bold">
-        Since <br /> 2009
-      </h3>
-      <p className="text-gray-500 text-xs mt-2">
-        Serving travelers with dedication and excellence
-      </p>
-    </div>
-
-  </div>
-
-</div>
-
-    </section>
-
-
-
-
-        <section className="relative py-20 px-6 bg-[#d9eef7] overflow-hidden">
-
-      {/* SOFT WAVY BG EFFECT */}
-      <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top_left,white,transparent_60%)]"></div>
-
-      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-        {/* LEFT IMAGE */}
-        <div className="relative">
-          <img
-            src="/assets/about/customer.webp" // 👈 ADD IMAGE HERE
-            alt="Customer"
-            className="rounded-2xl shadow-lg w-full h-[380px] object-cover"
+        {/* BACKGROUND IMAGE */}
+        <div className="absolute inset-0 z-0">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/assets/about/bg.webp')",
+            }}
           />
+          <div className="absolute inset-0 bg-[#eaf4fb]/70"></div>
+        </div>
 
-          {/* RATING CARD */}
-          <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-white rounded-xl shadow px-4 py-2 flex items-center gap-2">
-            <span className="text-yellow-400 text-lg">⭐</span>
-            <div>
-              <p className="text-blue-600 font-bold text-sm">4.9</p>
-              <p className="text-gray-500 text-[11px]">Customer Rating</p>
+        {/* CONTENT */}
+        <div className="relative z-10">
+
+          {/* ================= SECTION 1 ================= */}
+          <section className="py-20 px-6 bg-transparent">
+
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+              {/* LEFT */}
+              <div>
+                <span className="inline-block bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full mb-4">
+                  OUR STORY
+                </span>
+
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  IATA Recognized <br />
+                  <span className="text-blue-600">Partners</span>
+                </h2>
+
+                <p className="text-gray-600 text-sm mt-4">
+                  HassaanTravel is a leading IATA-authorized travel agency specializing in South Asia and pilgrimage journeys.
+                </p>
+
+                <p className="text-gray-600 text-sm mt-4">
+                  Since 2009, we provide seamless travel with personalized guidance.
+                </p>
+
+                <p className="text-gray-600 text-sm mt-4">
+                  Flights, hotels, visas — we handle everything.
+                </p>
+
+                {/* FEATURES */}
+                <div className="grid grid-cols-2 gap-4 mt-6">
+                  <div className="bg-white rounded-xl shadow p-4 flex items-center gap-2 text-sm">
+                    <FaGlobe className="text-blue-600" /> IATA Certified
+                  </div>
+
+                  <div className="bg-white rounded-xl shadow p-4 flex items-center gap-2 text-sm">
+                    <FaPlane className="text-blue-600" /> 200+ Destinations
+                  </div>
+
+                  <div className="bg-white rounded-xl shadow p-4 flex items-center gap-2 text-sm">
+                    <FaHeart className="text-red-500" /> 50K+ Customers
+                  </div>
+
+                  <div className="bg-white rounded-xl shadow p-4 flex items-center gap-2 text-sm">
+                    <FaLock className="text-green-600" /> Secure Bookings
+                  </div>
+                </div>
+
+                <button className="mt-6 bg-green-200 text-green-800 text-xs px-4 py-2 rounded-full">
+                  OUR COMMITMENT
+                </button>
+              </div>
+
+              {/* RIGHT */}
+              <div className="relative">
+                <img
+                  src="/assets/about/1.webp"
+                  className="rounded-2xl shadow-lg w-full h-[420px] object-cover"
+                />
+
+                <div className="absolute bottom-6 left-6 bg-white border rounded-xl p-5 shadow-lg w-[220px]">
+                  <h3 className="text-blue-600 text-2xl font-bold">
+                    Since <br /> 2009
+                  </h3>
+                </div>
+              </div>
+
             </div>
-          </div>
-        </div>
+          </section>
 
-        {/* RIGHT TEXT */}
-        <div>
+          {/* ================= SECTION 2 ================= */}
+          <section className="py-20 px-6 bg-transparent">
 
-          {/* HEADING */}
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight text-black">
-            Customer Satisfaction is <br />
-            <span className="text-[#b6d84f]">Our Priority</span>
-          </h2>
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-          {/* TEXT */}
-          <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-            At HassaanTravel, customer satisfaction is our top priority. We pride
-            ourselves on offering competitive pricing, flexible booking options,
-            and expert advice, making every trip a stress-free and memorable experience.
-          </p>
+              {/* IMAGE */}
+              <div className="relative">
+                <img
+                  src="/assets/about/customer.webp"
+                  className="rounded-2xl shadow-lg w-full h-[380px] object-cover"
+                />
 
-          <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-            Our team of dedicated travel professionals works around the clock to
-            ensure your journey is seamless from start to finish. We understand
-            that travel is more than just reaching a destination—it's about creating
-            memories that last a lifetime.
-          </p>
+                <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-white rounded-xl shadow px-4 py-2 flex gap-2">
+                  ⭐ <span className="text-blue-600 font-bold text-sm">4.9</span>
+                </div>
+              </div>
 
-          {/* LIST */}
-          <ul className="mt-6 space-y-3 text-sm text-gray-700">
+              {/* TEXT */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  Customer Satisfaction is <br />
+                  <span className="text-[#b6d84f]">Our Priority</span>
+                </h2>
 
-            <li className="flex items-start gap-3">
-              <span className="w-4 h-4 mt-1 rounded-full bg-[#b6d84f] flex items-center justify-center text-white text-[10px]">
-                ✓
-              </span>
-              Competitive pricing with transparent costs
-            </li>
+                <p className="text-gray-600 text-sm mt-4">
+                  We offer flexible booking, expert advice, and stress-free travel.
+                </p>
 
-            <li className="flex items-start gap-3">
-              <span className="w-4 h-4 mt-1 rounded-full bg-[#b6d84f] flex items-center justify-center text-white text-[10px]">
-                ✓
-              </span>
-              Flexible payment and booking options
-            </li>
+                <ul className="mt-6 space-y-3 text-sm">
+                  {[
+                    "Competitive pricing",
+                    "Flexible booking",
+                    "Expert consultation",
+                    "Personalized plans",
+                    "24/7 support",
+                    "Visa assistance"
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className="w-4 h-4 bg-[#b6d84f] text-white text-[10px] flex items-center justify-center rounded-full">
+                        ✓
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <li className="flex items-start gap-3">
-              <span className="w-4 h-4 mt-1 rounded-full bg-[#b6d84f] flex items-center justify-center text-white text-[10px]">
-                ✓
-              </span>
-              Expert travel advice and consultation
-            </li>
+            </div>
+          </section>
 
-            <li className="flex items-start gap-3">
-              <span className="w-4 h-4 mt-1 rounded-full bg-[#b6d84f] flex items-center justify-center text-white text-[10px]">
-                ✓
-              </span>
-              Personalized itineraries tailored to you
-            </li>
-
-            <li className="flex items-start gap-3">
-              <span className="w-4 h-4 mt-1 rounded-full bg-[#b6d84f] flex items-center justify-center text-white text-[10px]">
-                ✓
-              </span>
-              24/7 customer support throughout your journey
-            </li>
-
-            <li className="flex items-start gap-3">
-              <span className="w-4 h-4 mt-1 rounded-full bg-[#b6d84f] flex items-center justify-center text-white text-[10px]">
-                ✓
-              </span>
-              Hassle-free visa and documentation assistance
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-    </section>
-
-
+     
+  </div>
+</div>
 
     <section className="relative py-20 px-6 bg-[#eef7fc] overflow-hidden">
 

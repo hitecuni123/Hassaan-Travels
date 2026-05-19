@@ -1,34 +1,15 @@
 import TestimonialsSection from "@/app/components/ui/TestimonialsSection";
 import FaqSection from "../components/ui/FaqSection";
+import HeroSection from "../components/ui/HeroSection";
 
 export default function NetherlandsPage() {
   return (
     <main className="min-h-screen">
       
-      {/* HERO SECTION */}
-      <section className="relative h-[260px] md:h-[320px] flex items-center justify-center text-center">
-
-        {/* BACKGROUND IMAGE */}
-        <img
-          src="/images/contact-bg.jpg"
-          alt="Ticketing"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-white/50"></div>
-
-        {/* TEXT */}
-        <div className="relative z-10 px-4">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight">
-            Pakistani Family & Tourist Visa Services | Hassaan Travel - Simple & Fast Processing
-          </h1>
-
-          <p className="text-xs sm:text-sm text-black mt-3">
-            Expert Visa Services for Pakistani and UAE Travelers.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+  title="Pakistani Family & Tourist Visa Services | Hassaan Travel - Simple & Fast Processing"
+  subtitle="Expert Visa Services for Pakistani and UAE Travelers."
+/>
 
       {/* ===== MAIN SECTION ===== */}
       <section

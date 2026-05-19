@@ -1,5 +1,6 @@
 import TestimonialsSection from "@/app/components/ui/TestimonialsSection";
 import FaqSection from "@/app/components/ui/FaqSection";
+import HeroSection from "@/app/components/ui/HeroSection";
 
 
 
@@ -7,52 +8,24 @@ import React from "react";
 import WhySection from "../components/ui/WhySection";
 
 const UmrahPage: React.FC = () => {
+  
   return (
     <div className="bg-white min-h-screen">
 
-      <section className="relative py-20 md:py-24 px-4 overflow-hidden">
-
-  {/* BACKGROUND IMAGE (light + soft) */}
-  <div
-    className="absolute inset-0 bg-cover bg-center brightness-125 contrast-90 saturate-75"
-    style={{ backgroundImage: "url('/images/umrah.jpg')" }}
-  ></div>
-
-  {/* SOFT BLUE OVERLAY (main effect) */}
-  <div className="absolute inset-0 bg-[#dff4fb]/40"></div>
-
-  {/* EXTRA GRADIENT (top sky effect) */}
-  <div className="absolute inset-0 bg-gradient-to-b from-[#dff4fb]/60 via-[#dff4fb]/30 to-transparent"></div>
-
-  {/* CONTENT */}
-  <div className="relative z-10 max-w-5xl mx-auto text-center">
-
-    {/* HEADING */}
-    
-    <h1 className="mt-10 text-4xl md:text-4xl font-bold leading-tight text-black">
+ <HeroSection
+  title={
+    <>
       Apply for Your Umrah Visa Online with Hassaan <br /> Travel
-    </h1>
-
-    {/* DESCRIPTION */}
-    <p className="mt-6 text-gray-700 text-sm md:text-lg max-w-3xl mx-auto">
+    </>
+  }
+  subtitle={
+    <>
       Fast, Easy, and Reliable Umrah Visa Services for Performers from the Netherlands.
-    </p>
+    </>
+  }
+/>
 
-    {/* BUTTONS */}
-    <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
 
-      <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold">
-        Apply Umrah Visa Now
-      </button>
-
-      <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-4 rounded-xl font-semibold">
-        Requirements
-      </button>
-
-    </div>
-
-  </div>
-</section>
 
      
 <section className="relative py-20 px-6 overflow-hidden">
@@ -151,9 +124,6 @@ const UmrahPage: React.FC = () => {
   </div>
 </section>
 
-
-
-
 <section className="relative w-full py-24">
 
   {/* BACKGROUND IMAGE */}
@@ -187,6 +157,7 @@ const UmrahPage: React.FC = () => {
           Faster processing, convenient services, expert assistance at every step
         </p>
       </div>
+      
 
       <div className="w-[340px] h-[180px] border-2 border-[#2f8ecb] rounded-2xl flex items-center justify-center bg-[#f5f7fa] px-6">
         <p className="text-base font-semibold text-[#3c4663] text-center">
@@ -250,8 +221,6 @@ const UmrahPage: React.FC = () => {
 
   </div>
 </section>
-
-
 
 
 <section className="py-24 px-4 bg-[#f7f7f7]">
@@ -333,6 +302,9 @@ const UmrahPage: React.FC = () => {
 
 
 
+
+
+
 <WhySection />
 
 
@@ -342,12 +314,6 @@ const UmrahPage: React.FC = () => {
 
 
 <TestimonialsSection />
-      
-
-
-
-
-
 
 
 

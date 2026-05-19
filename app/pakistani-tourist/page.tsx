@@ -1,36 +1,19 @@
 import TestimonialsSection from "@/app/components/ui/TestimonialsSection";
 import FaqSection from "../components/ui/FaqSection";
+import HeroSection from "../components/ui/HeroSection";
 export default function PakistaniTouristPage() {
   return (
     <main className="w-full text-gray-800">
 
-      {/* HERO SECTION */}
-      <section className="relative h-[260px] md:h-[320px] flex items-center justify-center text-center">
-
-        {/* BACKGROUND IMAGE */}
-        <img
-          src="/images/contact-bg.jpg"
-          alt="UAE Visa"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-white/50"></div>
-
-        {/* TEXT */}
-        <div className="relative z-10 px-4">
-        <h1 className="mt-10 text-xl sm:text-4xl md:text-4xl font-bold text-black leading-tight">
-Pakistani Family & Tousist Visa Services |             <br />
-            Hassaan Travel - Simple & Fast Processing
-          </h1>
-
-          <p className="text-xs sm:text-sm text-black mt-3">
-Apply online for a Pakistani Family & Tourist visa today! Simple application process, fast approvals, and expert assistance          </p>
-        </div>
-
-      </section>
-
-
+<HeroSection
+  title={
+    <>
+      Pakistani Family & Tourist Visa Services | <br />
+      Hassaan Travel - Simple & Fast Processing
+    </>
+  }
+  subtitle="Apply online for a Pakistani Family & Tourist visa today! Simple application process, fast approvals, and expert assistance"
+/>
 {/* ================= FAMILY VISA SECTION ================= */}
 <section
   className="relative py-16 px-6 bg-cover bg-center"

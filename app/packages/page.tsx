@@ -1,37 +1,18 @@
 "use client";
-
+import HeroSection from "@/app/components/ui/HeroSection";
 export default function PackagesPage() {
   return (
     <>
-{/* HERO SECTION */}
-<section className="relative h-[42vh] min-h-[280px] flex items-center justify-center text-center px-4 overflow-hidden">
-
-  {/* BACKGROUND IMAGE */}
-  <div className="absolute inset-0 -z-10">
-    <img
-      src="/images/contact-bg.jpg"
-      alt=""
-      className="w-full h-full object-cover"
-    />
-    {/* LIGHTER OVERLAY (so bg shows more) */}
-    <div className="absolute inset-0 bg-white/50"></div>
-  </div>
-
-  {/* CONTENT */}
-  <div className=" mx-auto flex flex-col items-center justify-center">
-
-    <h1 className="mt-20 text-lg sm:text-2xl md:text-3xl font-extrabold text-black leading-snug mb-3">
+<HeroSection
+  
+  title={
+    <>
       Pakistani Family & Tourist Visa Services <br />
       Hassaan Travel - Simple & Fast Processing
-    </h1>
-
-    <p className="text-gray-800 text-sm sm:text-base font-medium mb-4">
-      Apply online for a Pakistani Family & Tourist visa today! Fast approvals & expert help.
-    </p>
-
- 
-  </div>
-</section>
+    </>
+  }
+  subtitle="Apply online for a Pakistani Family & Tourist visa today! Fast approvals & expert help."
+/>
 
 
 

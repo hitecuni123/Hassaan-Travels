@@ -1,16 +1,13 @@
+import HeroSection from "../components/ui/HeroSection";
+
 export default function Terms() {
   return (
     <main className="w-full text-gray-800">
 
-      {/* HERO */}
-      <section
-        className="py-20 text-center text-black bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/services-bg.jpg')" }}
-      >
-        <h1 className="mt-10 text-4xl md:text-4xl font-bold">
-          Terms & Conditions
-        </h1>
-      </section>
+       <HeroSection
+  title="Terms and Conditions"
+  
+/>
 
       {/* CONTENT */}
       <section
