@@ -26,113 +26,141 @@ export default function NetherlandsPage() {
   {/* CONTENT */}
   <div className="relative z-10">
 
-    {/* ================= SECTION 1 ================= */}
-    <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-md p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+ <div className="w-full bg-transparent py-12 px-4 flex flex-col items-center gap-7">
 
-      <div className="flex-1">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-snug">
-          Simplifying Your{" "}
-          <span className="text-blue-600">Netherlands</span>{" "}
-          <span className="text-blue-500">Visa Process</span>
-        </h2>
+  {/* ================= SECTION 1 ================= */}
+  <div className="max-w-[1020px] w-full bg-[#e3e8ed]/50 backdrop-blur-md border border-white/40 rounded-[2.2rem] shadow-[0_15px_45px_rgba(0,0,0,0.04)] p-8 md:p-11 flex flex-col md:flex-row items-center gap-9">
 
-        <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-          Citizens of the UAE can travel to the Netherlands without a visa
-          for short stays, typically up to 90 days within a 180-day period,
-          for tourism or business purposes.
-        </p>
-      </div>
+    {/* LEFT TEXT */}
+    <div className="flex-[1.15] text-left">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight tracking-tight mb-4">
+        Simplifying Your <span className="text-[#0082d2]">Netherlands Visa Process</span>
+      </h2>
 
-      <div className="flex-1 w-full">
-        <img
-          src="/assets/netherlands/net1.webp"
-          alt="Visa Process"
-          className="w-full h-[180px] md:h-[200px] object-cover rounded-xl"
-        />
-      </div>
-    </div>
-
-    {/* NOTE */}
-    <div className="max-w-3xl mx-auto mt-8 bg-white/70 backdrop-blur rounded-xl shadow-sm p-4 text-center">
-      <p className="text-blue-600 text-xs font-medium">
-        If your visa application is canceled, the visa costs and service costs are not refunded
-      </p>
-      <p className="text-gray-500 text-[11px] mt-1">
-        For more terms and conditions, it is necessary to apply and agree with us beforehand.
-        The visa processing fee will be AED 850.
+      <p className="text-gray-800 text-[14px] font-normal leading-[1.62] tracking-wide">
+        Citizens of the UAE can travel to the Netherlands without a visa
+        for short stays, typically up to 90 days within a 180-day period,
+        for tourism or business purposes.
       </p>
     </div>
 
-    {/* ================= SECTION 2 ================= */}
-    <div className="max-w-5xl mx-auto mt-16 bg-white rounded-2xl shadow-md p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+    {/* RIGHT IMAGE */}
+    <div className="flex-1 w-full">
+      <img
+        src="/assets/netherlands/net1.webp"
+        alt="Visa Process"
+        className="w-full h-[210px] md:h-[254px] object-cover rounded-2xl"
+      />
+    </div>
+  </div>
 
-      <div className="flex-1">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-snug">
-          Visa-Free Travel for{" "}
-          <span className="text-blue-600">UAE</span>{" "}
-          <span className="text-blue-500">Citizens</span>
-        </h2>
+  {/* ================= NOTE ================= */}
+  <div className="max-w-[840px] w-full bg-[#e3e8ed]/50 backdrop-blur-md border border-white/40 rounded-2xl shadow-sm py-3.5 px-6 text-center">
+    
+    {/* Line 1: Main Rule */}
+    <p className="text-[#0082d2] text-[10.5px] font-bold tracking-tight whitespace-nowrap overflow-x-auto max-w-full">
+      If your visa application is canceled, the visa costs and service costs are not returned
+    </p>
+    
+    {/* Line 2: Details */}
+    <p className="text-gray-800 text-[9.5px] font-medium mt-0.5 whitespace-nowrap overflow-x-auto max-w-full">
+      For short-term tourist single-entry visa, it is valid for 30 days and with no extension. The visa processing fee will be 250 AED.
+    </p>
+  </div>
 
-        <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-          UAE citizens can travel to the Netherlands for tourism and business
-          purposes without having a visa if they have an Emirati passport.
-          The Netherlands allows them to stay for up to 90 days.
-        </p>
-      </div>
+</div>
 
-      <div className="flex-1 w-full">
-        <img
-          src="/assets/netherlands/net2.webp"
-          alt="Visa Free Travel"
-          className="w-full h-[180px] md:h-[200px] object-cover rounded-xl"
-        />
-      </div>
 
+{/* ================= SECTION 2 ================= */}
+<div className="max-w-[1020px] w-full bg-[#e3e8ed]/50 backdrop-blur-md border border-white/40 rounded-[2.2rem] shadow-[0_15px_45px_rgba(0,0,0,0.04)] p-8 md:p-11 flex flex-col md:flex-row items-center gap-9 mx-auto mt-10">
+
+  {/* LEFT TEXT */}
+  <div className="flex-[1.15] text-left">
+    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight tracking-tight mb-4">
+      Visa-Free Travel for <span className="text-[#0082d2]">UAE Citizens</span>
+    </h2>
+
+    <p className="text-gray-800 text-[14px] font-normal leading-[1.62] tracking-wide">
+      UAE citizens can travel to the Netherlands for tourism and business
+      purposes without having a visa if they have an Emirati passport.
+      The Netherlands allows them to stay for up to 90 days.
+    </p>
+  </div>
+
+  {/* RIGHT IMAGE */}
+  <div className="flex-1 w-full">
+    <img
+      src="/assets/netherlands/net2.webp"
+      alt="Visa Free Travel"
+      className="w-full h-[210px] md:h-[254px] object-cover rounded-2xl"
+    />
+  </div>
+
+</div>
+
+  {/* ================= VISA TYPES ================= */}
+<div className="max-w-6xl mx-auto mt-14 px-4">
+  {/* Heading: Deep Navy, Larger, and Centered */}
+  <h3 className="text-2xl md:text-3.5xl font-extrabold text-[#0f172a] text-center mb-12 tracking-tight">
+    Which Visa Do You Need?
+  </h3>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+    {/* CARD 1 */}
+    <div className="bg-white/35 backdrop-blur-md rounded-3xl p-6 border border-white/40 shadow-sm flex flex-col items-start text-left transition-all duration-300 hover:shadow-md">
+      <img
+        src="/assets/netherlands/icon1.webp"
+        alt="Tourist Visa"
+        className="w-14 h-14 object-contain mb-5"
+      />
+      <h4 className="text-lg font-bold text-gray-900 tracking-wide">Tourist Visa</h4>
+      <p className="text-[13px] text-gray-600 font-medium leading-relaxed mt-2">
+        Ideal for leisure travel and exploring the Netherlands.
+      </p>
     </div>
 
-    {/* ================= VISA TYPES ================= */}
-    <div className="max-w-6xl mx-auto mt-14 text-center">
-
-      <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-10">
-        Which Visa Do You Need?
-      </h3>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-
-        <div className="bg-white/80 backdrop-blur rounded-xl p-5 shadow-sm">
-          <div className="text-blue-600 text-3xl mb-3">🧳</div>
-          <h4 className="font-semibold text-gray-800">Tourist Visa</h4>
-          <p className="text-xs text-gray-500 mt-2">
-            Ideal for leisure travel and exploring the Netherlands.
-          </p>
-        </div>
-
-        <div className="bg-white/80 backdrop-blur rounded-xl p-5 shadow-sm">
-          <div className="text-blue-600 text-3xl mb-3">💼</div>
-          <h4 className="font-semibold text-gray-800">Business Visa</h4>
-          <p className="text-xs text-gray-500 mt-2">
-            For meetings, events, and professional engagements.
-          </p>
-        </div>
-
-        <div className="bg-white/80 backdrop-blur rounded-xl p-5 shadow-sm">
-          <div className="text-blue-600 text-3xl mb-3">👨‍👩‍👧</div>
-          <h4 className="font-semibold text-gray-800">Family Visit Visa</h4>
-          <p className="text-xs text-gray-500 mt-2">
-            Reconnect with loved ones living in the Netherlands.
-          </p>
-        </div>
-
-        <div className="bg-white/80 backdrop-blur rounded-xl p-5 shadow-sm">
-          <div className="text-blue-600 text-3xl mb-3">🎓</div>
-          <h4 className="font-semibold text-gray-800">Student Visa</h4>
-          <p className="text-xs text-gray-500 mt-2">
-            For academic or training opportunities.
-          </p>
-        </div>
-
-      </div>
+    {/* CARD 2 */}
+    <div className="bg-white/35 backdrop-blur-md rounded-3xl p-6 border border-white/40 shadow-sm flex flex-col items-start text-left transition-all duration-300 hover:shadow-md">
+      <img
+        src="/assets/netherlands/icon2.webp"
+        alt="Business Visa"
+        className="w-14 h-14 object-contain mb-5"
+      />
+      <h4 className="text-lg font-bold text-gray-900 tracking-wide">Business Visa</h4>
+      <p className="text-[13px] text-gray-600 font-medium leading-relaxed mt-2">
+        For meetings, events, and professional engagements.
+      </p>
     </div>
+
+    {/* CARD 3 */}
+    <div className="bg-white/35 backdrop-blur-md rounded-3xl p-6 border border-white/40 shadow-sm flex flex-col items-start text-left transition-all duration-300 hover:shadow-md">
+      <img
+        src="/assets/netherlands/icon3.webp"
+        alt="Family Visa"
+        className="w-14 h-14 object-contain mb-5"
+      />
+      <h4 className="text-lg font-bold text-gray-900 tracking-wide">Family Visit Visa</h4>
+      <p className="text-[13px] text-gray-600 font-medium leading-relaxed mt-2">
+        Reunite with loved ones living in the Netherlands.
+      </p>
+    </div>
+
+    {/* CARD 4 */}
+    <div className="bg-white/35 backdrop-blur-md rounded-3xl p-6 border border-white/40 shadow-sm flex flex-col items-start text-left transition-all duration-300 hover:shadow-md">
+      <img
+        src="/assets/netherlands/icon4.webp"
+        alt="Student Visa"
+        className="w-14 h-14 object-contain mb-5"
+      />
+      <h4 className="text-lg font-bold text-gray-900 tracking-wide">Student Visa</h4>
+      <p className="text-[13px] text-gray-600 font-medium leading-relaxed mt-2">
+        For academic or training opportunities (if applicable).
+      </p>
+    </div>
+
+  </div>
+</div>
 
   </div>
 </section>

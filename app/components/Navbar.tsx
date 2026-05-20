@@ -35,11 +35,10 @@ export default function Navbar() {
 
         {/* DESKTOP NAV */}
         <nav className="hidden lg:flex items-center gap-8 text-gray-700 text-sm">
-          <Link href="/services" className="hover:text-blue-600 font-medium">Services</Link>
-          <Link href="/umrah" className="hover:text-blue-600 font-medium">Umrah</Link>
-          <Link href="/visa" className="hover:text-blue-600 font-medium">Visa</Link>
+          <Link href="/destinations" className="hover:text-blue-600 font-medium">Destinations</Link>
           <Link href="/packages" className="hover:text-blue-600 font-medium">Packages</Link>
-          <Link href="/ticketing" className="hover:text-blue-600 font-medium">Ticketing</Link>
+          <Link href="/visa" className="hover:text-blue-600 font-medium">Visa</Link>
+          <Link href="/umrah" className="hover:text-blue-600 font-medium">Umrah</Link>
           <Link href="/about" className="hover:text-blue-600 font-medium">About</Link>
           <Link href="/contact" className="hover:text-blue-600 font-medium">Contact</Link>
         </nav>

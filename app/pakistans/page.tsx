@@ -6,11 +6,15 @@ export default function NetherlandsPage() {
   return (
     <main className="min-h-screen">
       
-      <HeroSection
-  title="Pakistani Family & Tourist Visa Services | Hassaan Travel - Simple & Fast Processing"
+     <HeroSection
+  title={
+    <>
+      Pakistani Family & Tourist Visa Services | <br />
+      Hassaan Travel - Simple & Fast Processing
+    </>
+  }
   subtitle="Expert Visa Services for Pakistani and UAE Travelers."
 />
-
       {/* ===== MAIN SECTION ===== */}
       <section
         className="relative py-16 px-6 bg-cover bg-center"
@@ -21,98 +25,117 @@ export default function NetherlandsPage() {
 
         <div className="relative max-w-6xl mx-auto space-y-10">
 
-          {/* ===== TOP CARD ===== */}
-          <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+         {/* ===== TOP CARD ===== */}
+<div className="relative max-w-5xl mx-auto bg-white/70 backdrop-blur-lg rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] p-6 md:p-10 flex flex-col md:flex-row items-center gap-8">
 
-            {/* LEFT TEXT */}
-            <div className="md:w-[65%]">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                What is a <span className="text-blue-600">Pakistani Family Visa?</span>
-              </h2>
+  {/* LEFT TEXT */}
+  <div className="md:w-[65%]">
 
-              <p className="text-gray-700 mt-4 text-sm leading-relaxed font-medium">
-                A Pakistani Family Visa allows foreign nationals to visit or stay in Pakistan and return with their family members who are living in Pakistan.
-              </p>
+    {/* HEADING */}
+    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 leading-snug">
+      What is a{" "}
+      <span className="text-[#1e88c8]">Pakistani Family Visa?</span>
+    </h2>
 
-              <p className="text-gray-700 mt-3 text-sm leading-relaxed font-medium">
-                A Pakistani Family Visa is usually granted to a spouse, children, parents, etc.
-              </p>
+    {/* PARAGRAPHS */}
+    <p className="text-gray-600 mt-4 text-sm leading-relaxed">
+      A Pakistani Family Visa allows foreign nationals to visit or stay in Pakistan
+      and return with their family members who are living in Pakistan.
+    </p>
 
-              <p className="text-gray-700 mt-3 text-sm leading-relaxed font-medium">
-                We offer different types of Pakistani Family Visas and our expert services to help you through the visa application process.
-              </p>
-            </div>
+    <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+      A Pakistani Family Visa is usually granted to a spouse, children, parents,
+      etc.
+    </p>
 
-            {/* RIGHT IMAGE */}
-            <div className="md:w-[35%] h-[200px] md:h-[220px]">
-              <img
-                src="/assets/pakistan/p1.webp"
-                alt="Family Visa"
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </div>
-          </div>
-
-  {/* ===== BOTTOM CARD (EXACT LIKE SCREENSHOT) ===== */}
-<div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-6 md:p-8">
-
-  <div className="grid md:grid-cols-2 gap-8 items-start">
-
-    {/* LEFT TEXT */}
-    <div>
-      <h2 className="text-[22px] md:text-[26px] font-bold text-black leading-snug">
-        The <span className="text-blue-600">RequiredDocuments</span> for
-        Pakistan Family Visa:
-      </h2>
-
-      <div className="mt-4 text-[14px] text-gray-700 leading-relaxed space-y-2">
-
-        <p>1. Passport (Valid for at least 6 months)</p>
-
-        <p>
-          2. Recent passport photo (passport photo must not be older than
-          6 months)
-        </p>
-
-        <p>
-          3. If you are of Pakistani origin or married to a Pakistani
-          origin, one of the following combinations:
-        </p>
-
-        {/* BULLETS */}
-        <ul className="list-disc pl-5 space-y-1">
-          <li>A Pakistani ID card (NIC)</li>
-          <li>An old/expired Pakistani passport</li>
-          <li>Birth certificate</li>
-          <li>
-            Children under the age of 17 must provide valid passports from
-            both parents, at least one Pakistani ID of the father or mother
-          </li>
-        </ul>
-
-        <p>
-          • Marriage certificate, Marriage book, Nikkahnama or BRP extract
-          with mention of your partner in combination with your partner’s
-          Pakistani ID (NIC, MNIC, NICOP, or POC) or your Pakistani passport.
-        </p>
-
-        <p>
-          4. For children under the age of 17, a "Parents Consent Form" is
-          required and it must be completed and signed by both parents.
-        </p>
-
-      </div>
-    </div>
-
-    {/* RIGHT IMAGE (FIXED LIKE DESIGN) */}
-    <div className="w-[90%] ml-auto">
-  <img
-    src="/assets/pakistan/p2.webp"
-    className="w-full h-[420px] object-cover rounded-xl"
-  />
-</div>
+    <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+      We offer different types of Pakistani Family Visas and our expert services
+      to help you through the visa application process.
+    </p>
 
   </div>
+
+  {/* RIGHT IMAGE */}
+  <div className="md:w-[35%] w-full">
+
+    <div className="relative h-[200px] md:h-[230px] rounded-xl overflow-hidden shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
+
+      <img
+        src="/assets/pakistan/p1.webp"
+        alt="Family Visa"
+        className="w-full h-full object-cover"
+      />
+
+    </div>
+
+  </div>
+</div>
+
+{/* ===== REQUIRED DOCUMENTS CARD ===== */}
+<div className="max-w-5xl mx-auto bg-white/70 backdrop-blur-lg rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] p-6 md:p-10 flex flex-col md:flex-row items-stretch gap-8">
+
+  {/* LEFT */}
+  <div className="md:w-[65%] h-full flex flex-col justify-between">
+
+    {/* HEADING */}
+    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 leading-snug">
+      The{" "}
+      <span className="text-[#1e88c8]">Required Documents</span>{" "}
+      for Pakistani Family Visa:
+    </h2>
+
+    {/* LIST */}
+    <div className="mt-4 text-gray-600 text-sm leading-relaxed space-y-2">
+
+      <p>1. Passport (Valid for at least 6 months)</p>
+
+      <p>
+        2. Recent passport photo (passport photo must not be older than 6 months)
+      </p>
+
+      <p>
+        3. If you are of Pakistani origin or married to a Pakistani origin,
+        one of the following combinations:
+      </p>
+
+      {/* BULLETS */}
+      <ul className="list-disc pl-5 space-y-1">
+        <li>A Pakistani ID card (NIC)</li>
+        <li>An old/expired Pakistani passport</li>
+        <li>Birth certificate</li>
+        <li>
+          Children under the age of 17 must provide valid passports from both
+          parents, at least one Pakistani ID of the father or mother
+        </li>
+        <li>
+          Marriage certificate, Marriage book, Nikkahnama or BRP extract with
+          mention of your partner in combination with your partner’s Pakistani
+          ID (NIC, MNIC, NICOP, or POC) or your Pakistan passport
+        </li>
+      </ul>
+
+      <p>
+        4. For children under the age of 17, a "Parents Consent Form" is required
+        and it must be completed and signed by both parents.
+      </p>
+
+    </div>
+  </div>
+
+{/* RIGHT IMAGE */}
+<div className="md:w-[35%] w-full self-stretch">
+
+  <div className="h-full rounded-xl overflow-hidden shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
+
+    <img
+      src="/assets/pakistan/p2.webp"
+      alt="Required Documents"
+      className="w-full h-full object-cover"
+    />
+
+  </div>
+
+</div>
 </div>
 
         </div>
@@ -208,6 +231,13 @@ export default function NetherlandsPage() {
     </div>
   </div>
 </section>
+
+
+
+<FaqSection />
+
+
+<TestimonialsSection />
 
 
     </main>
