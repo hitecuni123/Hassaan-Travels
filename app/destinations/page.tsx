@@ -4,9 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import HeroSection from "../components/ui/HeroSection";
 import { FaPlane, FaUser, FaPassport, FaEnvelope } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5"; // Location Pin Icon
-import { BsFillAirplaneFill } from "react-icons/bs"; // Stylized Blue Plane Icon matching the image
+import { IoLocationSharp } from "react-icons/io5"; 
+import { BsFillAirplaneFill } from "react-icons/bs"; 
 import TestimonialsSection from "../components/ui/TestimonialsSection";
+
 
 /* ---------------- DESTINATIONS DATA ---------------- */
 const destinations = [
@@ -43,6 +44,7 @@ const destinations = [
     price: "€459",
   },
 ];
+
 
 /* ---------------- FORM JSON ---------------- */
 const formSections = [
@@ -98,6 +100,7 @@ export default function Destination() {
   return (
     <main className="w-full text-gray-800">
 
+  
       {/* HERO */}
       <HeroSection
         title={
@@ -123,6 +126,7 @@ export default function Destination() {
           </p>
         </div>
 
+     
         {/* Wider layout with safe side breathing space */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {destinations.map((item, index) => (
@@ -179,7 +183,8 @@ export default function Destination() {
         </div>
       </section>
 
-      {/* FORM SECTION */}
+
+    {/* FORM SECTION */}
       <section className="bg-[#cfe3ec] py-16 px-4 flex justify-center">
 
         <div className="w-full max-w-3xl bg-white/70 backdrop-blur-md rounded-2xl shadow-xl p-8">
@@ -211,6 +216,7 @@ export default function Destination() {
             ))}
           </div>
 
+         
           {/* FORM */}
           {formSections.map((section, i) => (
             <div key={i} className="mb-8">
@@ -250,25 +256,30 @@ export default function Destination() {
         </div>
       </section>
 
+     
       {/* TESTIMONIALS */}
       <TestimonialsSection />
 
+      
       {/* CTA SECTION */}
       <section className="w-full bg-blue-600 py-16 px-4 text-center text-white">
 
         <div className="max-w-2xl mx-auto">
 
-          {/* HEADING */}
+      
+      {/* HEADING */}
           <h2 className="text-2xl sm:text-3xl font-semibold mb-3">
             Ready to Take Off?
           </h2>
 
-          {/* SUBTEXT */}
+      
+      {/* SUBTEXT */}
           <p className="text-sm sm:text-base text-white/80 mb-6">
             Join thousands of satisfied travelers who trust Hassaan Travel for their flight bookings
           </p>
 
-          {/* BUTTON */}
+      
+      {/* BUTTON */}
           <button className="bg-white text-blue-600 text-sm font-bold px-6 py-2.5 rounded-md shadow-md hover:shadow-lg transition flex items-center gap-2 mx-auto">
             Start Booking Now
             <span className="text-lg">→</span>
