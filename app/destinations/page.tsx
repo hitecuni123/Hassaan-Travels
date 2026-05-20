@@ -4,7 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import HeroSection from "../components/ui/HeroSection";
 import { FaPlane, FaUser, FaPassport, FaEnvelope } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
+import { IoLocationSharp } from "react-icons/io5"; // Location Pin Icon
+import { BsFillAirplaneFill } from "react-icons/bs"; // Stylized Blue Plane Icon matching the image
 import TestimonialsSection from "../components/ui/TestimonialsSection";
 
 /* ---------------- DESTINATIONS DATA ---------------- */
@@ -109,10 +110,10 @@ export default function Destination() {
       />
 
       {/* DESTINATION SECTION */}
-      <section className="relative py-20 px-4 sm:px-8 md:px-16 bg-[#cfe3ec]">
+      <section className="relative py-20 px-6 sm:px-12 md:px-16 bg-[#cfe3ec]">
 
         <div className="text-center mb-14 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-5xl font-extrabold">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight tracking-tight">
             Fly to Your <span className="font-bold text-blue-600">Dream Destination</span>
           </h2>
 
@@ -122,25 +123,27 @@ export default function Destination() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Wider layout with safe side breathing space */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {destinations.map((item, index) => (
-            <div key={index} className="rounded-2xl overflow-hidden bg-white shadow-lg">
+            <div key={index} className="rounded-2xl overflow-hidden bg-white shadow-lg transition-transform duration-300 hover:scale-[1.02]">
 
               <div className="relative h-52">
                 <Image src={item.image} alt={item.name} fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
 
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">{item.name}</h3>
-                  <div className="flex items-center gap-1 text-xs">
-                    <IoLocationSharp size={12} className="text-red-400" />
+                  <h3 className="text-xl font-bold mb-0.5">{item.name}</h3>
+                  <div className="flex items-center gap-1 text-xs text-gray-200">
+                    {/* Image matching Red Pin Icon */}
+                    <IoLocationSharp size={14} className="text-red-500" />
                     {item.country}
                   </div>
                 </div>
               </div>
 
               <div className="p-5">
-                <p className="text-sm text-gray-500 mb-4">{item.description}</p>
+                <p className="text-sm text-gray-500 mb-4 h-10 line-clamp-2">{item.description}</p>
 
                 <div className="flex justify-between text-xs text-gray-400 mb-2">
                   <span>Flight Time</span>
@@ -148,8 +151,9 @@ export default function Destination() {
                 </div>
 
                 <div className="flex justify-between items-center mb-4">
-                  <div className="flex items-center gap-2 text-sm">
-                    <FaPlane size={12} className="text-blue-500" />
+                  <div className="flex items-center gap-2 text-sm font-bold text-gray-700">
+                    {/* Image matching Blue Airplane Icon */}
+                    <BsFillAirplaneFill size={16} className="text-sky-500 transform rotate-[45deg]" />
                     {item.time}
                   </div>
 
@@ -160,7 +164,7 @@ export default function Destination() {
 
                 <hr className="mb-4" />
 
-                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 rounded-xl font-medium">
+                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 rounded-xl font-medium shadow-sm hover:shadow-md transition-all">
                   View Flights →
                 </button>
               </div>
@@ -169,7 +173,7 @@ export default function Destination() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <button className="border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-medium transition hover:bg-blue-50">
+          <button className="bg-white border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-medium transition hover:bg-blue-50 shadow-sm">
             Explore All Destinations →
           </button>
         </div>
@@ -181,11 +185,12 @@ export default function Destination() {
         <div className="w-full max-w-3xl bg-white/70 backdrop-blur-md rounded-2xl shadow-xl p-8">
 
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-blue-600">
-              Air Ticket Request Form
+            <h2 className="text-2xl font-bold">
+              <span className="text-black">Air Ticket</span>{" "}
+              <span className="text-blue-600">Request Form</span>
             </h2>
             <p className="text-xs text-gray-500 mt-1">
-              Fill out the form and get best deals within 24 hours
+              Fill out the form below and our travel experts will find you the best flight deals <br className="hidden sm:inline" /> within 24 hours
             </p>
           </div>
 
